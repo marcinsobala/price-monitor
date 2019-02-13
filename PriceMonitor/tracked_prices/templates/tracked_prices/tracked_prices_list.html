@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Price Monitor</title>
+</head>
+<body>
+    <h1>It works!</h1>
+    {% for price in prices %}
+        <p>{{price.url}}</p>
+        <p>{{price.name}} {{price.current}} {{price.currency}}</p>
+        <p>{{price.desired}} {{ price.last_checked_date|date:"d.m.Y" }}</p>
+        <p>{{price.user}}</p>
+        <br><br>
+    {% endfor %}
+</body>
+</html>
