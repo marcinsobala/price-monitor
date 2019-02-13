@@ -10,7 +10,8 @@ def get_html_content(url):
 # Imports url set from SQL database
 urls = {'https://allegro.pl/oferta/gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-7820820756',
         'https://www.ceneo.pl/71356120',
-        'https://www.morele.net/karta-graficzna-gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-256-bit-3xhdmi-3xdp-usb-c-box-gv-n2070wf3-8gc-4142730/',
+        'https://www.morele.net/karta-graficzna-gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-256-bit-3xhdmi-3xdp'
+        '-usb-c-box-gv-n2070wf3-8gc-4142730/',
         'https://www.zalando.pl/pier-one-bluza-rozpinana-black-pi922s028-q11.html'
         }
 # Loops through urls and prints the product prices
