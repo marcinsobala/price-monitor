@@ -1,0 +1,14 @@
+{% extends 'tracked_prices/base.html' %}
+
+{% block content %}
+    <div class="price">
+        <h3><a href ="{{ price.url }}">{{price.url}}</a></h3>
+        <div class ="date">
+            <p>{{ price.last_checked_date|date:"d.m.Y" }}</p>
+        </div>
+        <p>{{price.name}} {{price.current}} {{price.currency}}</p>
+        <p>{{price.desired}}</p>
+        <p>{{price.user}}</p>
+    </div>
+
+{% endblock %}

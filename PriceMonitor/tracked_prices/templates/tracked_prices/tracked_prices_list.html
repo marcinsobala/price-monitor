@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Price Monitor</title>
-</head>
-<body>
-    <h1>It works!</h1>
+{% extends 'tracked_prices/base.html' %}
+
+{% block content %}
     {% for price in prices %}
-        <p>{{price.url}}</p>
-        <p>{{price.name}} {{price.current}} {{price.currency}}</p>
-        <p>{{price.desired}} {{ price.last_checked_date|date:"d.m.Y" }}</p>
-        <p>{{price.user}}</p>
-        <br><br>
+        <div class="price">
+            <h3><a href ="{{ price.url }}">{{price.url}}</a></h3>
+            <div class ="date">
+                <p>{{ price.last_checked_date|date:"d.m.Y" }}</p>
+            </div>
+            <p><a href ="{% url 'price_detail' pk=price.pk %}">{{price.name}}</a> {{price.current}} {{price.currency}}</p>
+            <p>{{price.desired}}</p>
+            <p>{{price.user}}</p>
+        </div>
     {% endfor %}
-</body>
-</html>
+{% endblock %}

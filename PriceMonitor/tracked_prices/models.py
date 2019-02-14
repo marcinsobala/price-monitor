@@ -17,4 +17,4 @@ class TrackedPrice(models.Model):
         self.save()
 
     def __str__(self):
-        return self.product_url[:50]
+        return self.url[:50]
