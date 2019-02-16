@@ -1,0 +1,22 @@
+{% extends "tracked_prices/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+
+        <table>
+        <tr>
+            <td>{{ form.username|as_crispy_field}}</td>
+        </tr>
+        <tr>
+            <td>{{ form.password|as_crispy_field }}</td>
+        </tr>
+        </table>
+
+        <input type="submit" value="Login" class="save btn btn-default pull-left" />
+        <input type="hidden" name="next" value="{{ next }}" />
+
+    </form>
+{% endblock %}
