@@ -4,10 +4,21 @@ from .forms import PriceForm
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from . scrape import name_price_currency
+from django.contrib.auth.models import User
 
 
-def tracked_prices_list(request):
-    prices = TrackedPrice.objects.all().order_by('-last_checked_date')
+def home(request):
+    return render(request, 'tracked_prices/home.html')
+
+
+def pufcia(request):
+    return render(request, 'tracked_prices/pufcia.html')
+
+
+@login_required
+def tracked_prices_list(request, username):
+    user = User.objects.get(username=username)
+    prices = TrackedPrice.objects.filter(user=user).order_by('-last_checked_date')
     return render(request, 'tracked_prices/tracked_prices_list.html', {'prices': prices})
 
 

@@ -16,7 +16,8 @@
         <a href="{% url 'price_new' %}" class="top-menu">
             <span class="glyphicon glyphicon-plus"></span>
         </a>
-        <p class="top-menu">Hello {{ user.username }}
+        <p class="top-menu">Hello
+            <a href="{% url 'tracked_prices_list' username=user.username %}">{{ user.username }}</a>
             <small>(<a href="{% url 'logout' %}">Log out</a>)</small>
         </p>
         {% else %}

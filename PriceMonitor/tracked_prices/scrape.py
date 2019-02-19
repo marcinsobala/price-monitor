@@ -42,8 +42,8 @@ def name_price_currency(url):
     return (name[0], price[0], currency[0])
 
 
-print(name_price_currency('https://www.morele.net/karta-graficzna-gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-256-bit-3xhdmi-3xdp'
-        '-usb-c-box-gv-n2070wf3-8gc-4142730/'))
+# print(name_price_currency('https://www.morele.net/karta-graficzna-gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-256-bit-3xhdmi-3xdp'
+#         '-usb-c-box-gv-n2070wf3-8gc-4142730/'))
 
 # # Loops through urls and prints the product prices
 # for url in urls:
