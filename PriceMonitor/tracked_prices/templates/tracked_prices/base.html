@@ -3,39 +3,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Price Monitor</title>
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/tracked_prices.css' %}">
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
 </head>
 <body>
-    <div class="page-header">
-        {% if user.is_authenticated %}
-        <a href="{% url 'price_new' %}" class="top-menu">
-            <span class="glyphicon glyphicon-plus"></span>
-        </a>
-        <p class="top-menu">Hello
-            <a href="{% url 'tracked_prices_list' username=user.username %}">{{ user.username }}</a>
-            <small>(<a href="{% url 'logout' %}">Log out</a>)</small>
-        </p>
-        {% else %}
-        <a href="{% url 'login' %}" class="top-menu">
-            <span class="glyphicon glyphicon-lock"></span>
-        </a>
-        {% endif %}
-        <h1><a href="/">Price monitor</a></h1>
-    </div>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success" style="font-size: 20px">
+            <a class="navbar-brand" href="/" style="font-size: 26px">Cebula hunter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Obsługiwane sklepy</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
+                    <li class="text-light">Hello,
+                        <a href="{% url 'tracked_prices_list' username=user.username %}" class="text-light">{{ user.username }}</a>
+                        <a href="{% url 'logout' %}" class="text-light px-2">
+                            <i class="fas fa-lock"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'price_new' %}" class="text-light px-2">
+                            <i class="fas fa-plus-square"></i>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'login' %}" class="text-light px-2">
+                            <i class="fas fa-unlock-alt"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <div class="content container">
-        <div class="row">
+
+    <main role="main" class="flex-shrink-0" style="padding-top: 80px">
+        <div class="container">
             <div class="col-md-8">
                 {% block content %}
                 {% endblock %}
             </div>
         </div>
-    </div>
+    </main>
 
+
+    <footer class="footer fixed-bottom mt-auto py-2 bg-light">
+      <div class="container">
+        <span class="text-muted">marcin.sobala@gmail.com</span>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

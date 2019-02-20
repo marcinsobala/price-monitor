@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0295410-c6ce-4e4b-ad67-9c42eba44c28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/tracked_prices/scrape.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,11 +43,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="69" lean-forward="true" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
+                <state relative-caret-position="187">
+                  <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
@@ -60,14 +55,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/scrape.py">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/blog/templates/blog/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="748">
-                  <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
-                  <folding>
-                    <element signature="e#0#15#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="102">
+                  <caret line="6" column="90" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="90" />
                 </state>
               </provider>
             </entry>
@@ -76,11 +68,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+                <state relative-caret-position="153">
+                  <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
                   <folding>
                     <element signature="e#0#64#0" expanded="true" />
                   </folding>
@@ -91,26 +83,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/home.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="33" />
+                <state relative-caret-position="85">
+                  <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/pufcia.html">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/static/css/tracked_prices.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/price_detail.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="21" column="14" selection-end-line="21" selection-end-column="14" />
+                <state relative-caret-position="435">
+                  <caret line="52" selection-start-line="52" selection-end-line="52" />
                 </state>
               </provider>
             </entry>
@@ -118,8 +101,13 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="19" column="75" selection-start-line="19" selection-start-column="75" selection-end-line="19" selection-end-column="75" />
+                <state relative-caret-position="289">
+                  <caret line="17" column="64" lean-forward="true" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+                  <folding>
+                    <element signature="n#style#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -154,16 +142,16 @@
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/PriceMonitor/urls.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py" />
-        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/static/css/tracked_prices.css" />
         <option value="$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/users/apps.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/scrape.py" />
-        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/price_detail.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py" />
-        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/home.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/pufcia.html" />
+        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/static/css/tracked_prices.css" />
+        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html" />
       </list>
     </option>
   </component>
@@ -197,6 +185,21 @@
               <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
               <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
               <item name="tracked_prices" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Price-Monitor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
+              <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
+              <item name="tracked_prices" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Price-Monitor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
+              <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
+              <item name="tracked_prices" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Price-Monitor" type="b2602c69:ProjectViewProjectNode" />
@@ -320,7 +323,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837664" visible="true" weight="0.1264489" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837664" visible="true" weight="0.1264489" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5016234" side_tool="true" weight="0.18890075" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -331,7 +334,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32932165" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21018419" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.35427952" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32827735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -420,13 +423,6 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/static/css/tracked_prices.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -573,6 +569,13 @@
     <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/blog/templates/blog/post_form.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/tracked_prices_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/blog/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -595,7 +598,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/scrape.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
+        <state relative-caret-position="-455">
           <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -603,24 +606,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/home.html">
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/price_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="14" selection-end-line="21" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="75" selection-start-line="19" selection-start-column="75" selection-end-line="19" selection-end-column="75" />
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -631,30 +623,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py">
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/price_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="69" lean-forward="true" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
+        <state relative-caret-position="187">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/blog/static/blog/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="64" lean-forward="true" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/tracked_prices_list.html">
+    <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/blog/templates/blog/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        <state relative-caret-position="102">
+          <caret line="6" column="90" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+        <state relative-caret-position="153">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/static/css/tracked_prices.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
