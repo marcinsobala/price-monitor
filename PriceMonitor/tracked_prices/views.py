@@ -3,6 +3,8 @@ from .models import TrackedPrice
 from .forms import PriceForm
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
+from django.views.generic import DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from . scrape import name_price_currency
 from django.contrib.auth.models import User
 
@@ -61,8 +63,15 @@ def price_edit(request, pk):
     return render(request, 'tracked_prices/price_edit.html', {'form': form})
 
 
-@login_required
-def price_remove(request, pk):
-    price = get_object_or_404(TrackedPrice, pk=pk)
-    price.delete()
-    return redirect('tracked_prices_list')
+class PriceDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = TrackedPrice
+
+    def test_func(self):
+        price = self.get_object()
+        if self.request.user == price.user:
+            return True
+        return False
+
+    def get_success_url(self):
+        return '/profile/' + self.request.user.username + '/'
+

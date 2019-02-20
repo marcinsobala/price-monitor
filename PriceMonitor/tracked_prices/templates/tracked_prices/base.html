@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/tracked_prices.css' %}">
 
 </head>
-<body>
+<body style="padding-top: 80px; background-image: url({% static 'linedpaper_@2x.png' %});">
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success" style="font-size: 20px">
             <a class="navbar-brand" href="/" style="font-size: 26px">Cebula hunter</a>
@@ -51,7 +51,7 @@
     </header>
 
 
-    <main role="main" class="flex-shrink-0" style="padding-top: 80px">
+    <main role="main" class="flex-shrink-0">
         <div class="container">
             <div class="col-md-8">
                 {% block content %}

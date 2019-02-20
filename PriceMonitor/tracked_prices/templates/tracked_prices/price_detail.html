@@ -6,10 +6,10 @@
         <div class ="date">
             <p>{{ price.last_checked_date|date:"d.m.Y" }}
                 <a class="btn btn-default" href="{% url 'price_edit' pk=price.pk %}">
-                    <span class="glyphicon glyphicon-pencil"></span>
+                  <i class="fas fa-edit"></i>
                 </a>
                 <a class="btn btn-default" href="{% url 'price_remove' pk=price.pk %}">
-                    <span class="glyphicon glyphicon-remove"></span>
+                    <i class="fas fa-trash-alt"></i>
                 </a>
             </p>
         </div>

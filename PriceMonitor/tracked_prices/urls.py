@@ -8,5 +8,5 @@ urlpatterns = [
     path('price/<int:pk>/', views.price_detail, name='price_detail'),
     path('price/new/', views.price_new, name='price_new'),
     path('price/<int:pk>/edit/', views.price_edit, name='price_edit'),
-    path('price/<int:pk>/remove/', views.price_remove, name='price_remove'),
+    path('price/<int:pk>/remove/', views.PriceDeleteView.as_view(), name='price_remove'),
 ]
