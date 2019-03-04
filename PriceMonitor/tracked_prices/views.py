@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import TrackedPrice
+from .models import TrackedPrice, Shop
 from .forms import PriceForm
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
@@ -15,6 +15,12 @@ def home(request):
 
 def pufcia(request):
     return render(request, 'tracked_prices/pufcia.html')
+
+
+def sklepy(request):
+    shops = Shop.objects.all().order_by('name')
+    return render(request, 'tracked_prices/shops.html', {'shops': shops})
+
 
 
 @login_required
@@ -56,7 +62,7 @@ def price_edit(request, pk):
             price.name, price.current, price.currency = name_price_currency(price.url)
             price.last_checked_date = timezone.now()
             price.save()
-            return redirect('price_detail', pk=price.pk)
+            return redirect('tracked_prices_list', username=request.user.username)
     else:
         form = PriceForm(instance=price)
 

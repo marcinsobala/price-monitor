@@ -1,0 +1,12 @@
+{% extends 'tracked_prices/base.html' %}
+
+{% block content %}
+    <h2>Lista sklepów stale się powiększa!</h2>
+    <br>
+    <div class="col-1">
+        {% for shop in shops %}
+            <a href="{{ shop.name }}" class="badge badge-pill badge-success">{{ shop.name|slice:"7:" }}</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

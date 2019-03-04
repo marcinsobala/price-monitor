@@ -18,3 +18,12 @@ class TrackedPrice(models.Model):
 
     def __str__(self):
         return self.url[:50]
+
+
+class Shop(models.Model):
+    name = models.URLField(max_length=100)
+
+    def __str__(self):
+        return self.name[7:]
+
+

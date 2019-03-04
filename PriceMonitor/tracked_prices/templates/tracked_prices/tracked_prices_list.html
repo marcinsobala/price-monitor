@@ -1,15 +1,38 @@
 {% extends 'tracked_prices/base.html' %}
 
 {% block content %}
-    {% for price in prices %}
-        <div class="price">
-            <h3><a href ="{{ price.url }}">{{price.url}}</a></h3>
-            <div class ="date">
-                <p>{{ price.last_checked_date|date:"d.m.Y" }}</p>
-            </div>
-            <p><a href ="{% url 'price_detail' pk=price.pk %}">{{price.name}}</a> {{price.current}} {{price.currency}}</p>
-            <p>{{price.desired}}</p>
-            <p>{{price.user}}</p>
-        </div>
-    {% endfor %}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nazwa produktu</th>
+      <th scope="col">Pożądana cena</th>
+      <th scope="col">Obecna cena</th>
+      <th scope="col">Waluta</th>
+      <th scope="col">Ostatnio sprawdzono</th>
+      <th scope="col">Edytuj</th>
+      <th scope="col">Usuń</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for price in prices %}
+    <tr>
+      <td><a href ="{{price.url}}">{{price.name}}</a></td>
+      <td>{{price.desired}}</td>
+      <td>{{price.current}}</td>
+      <td>{{price.currency}}</td>
+      <td>{{ price.last_checked_date|date:"d.m.Y" }}</td>
+      <td>
+        <a class="text-dark" href="{% url 'price_edit' pk=price.pk %}">
+            <i class="fas fa-edit"></i>
+        </a>
+      </td>
+      <td>
+        <a class="text-dark" href="{% url 'price_remove' pk=price.pk %}">
+            <i class="fas fa-trash-alt"></i>
+        </a>
+      </td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
 {% endblock %}

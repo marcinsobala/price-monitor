@@ -10,7 +10,7 @@
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">Yes, Delete</button>
-                <a class="btn btn-secondary" href="{% url 'price_detail' object.id %}">Cancel</a>
+                <a class="btn btn-secondary" href="{% url 'tracked_prices_list' user.username %}">Cancel</a>
             </div>
         </form>
     </div>
