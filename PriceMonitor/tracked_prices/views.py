@@ -24,8 +24,8 @@ def sklepy(request):
 
 
 @login_required
-def tracked_prices_list(request, username):
-    user = User.objects.get(username=username)
+def tracked_prices_list(request):
+    user = User.objects.get(username=request.user.username)
     prices = TrackedPrice.objects.filter(user=user).order_by('-last_checked_date')
     return render(request, 'tracked_prices/tracked_prices_list.html', {'prices': prices})
 
@@ -45,7 +45,7 @@ def price_new(request):
             price.user = request.user
             price.last_checked_date = timezone.now()
             price.save()
-            return redirect('price_detail', pk=price.pk)
+            return redirect('tracked_prices_list', username=request.user.username)
     else:
         form = PriceForm()
 

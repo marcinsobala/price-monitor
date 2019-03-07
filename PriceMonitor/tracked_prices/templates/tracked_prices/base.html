@@ -13,7 +13,7 @@
 </head>
 <body style="padding-top: 80px; background-image: url({% static 'linedpaper_@2x.png' %});">
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success" style="font-size: 20px">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success text-nowrap" style="font-size: 20px;">
             <a class="navbar-brand" href="/" style="font-size: 26px">Cebula hunter</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,13 +22,23 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="/">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'shops' %}">Obsługiwane sklepy</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'tracked_prices_list' %}">Śledzone ceny</a>
+                    </li>
+                    {% endif %}
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
                     <li class="text-light">Hello,
-                        <a href="{% url 'tracked_prices_list' username=user.username %}" class="text-light">{{ user.username }}</a>
+                        <a href="{% url 'profile' %}" class="text-light">{{ user.username }}</a>
+                    </li>
+                    <li>
                         <a href="{% url 'logout' %}" class="text-light px-2">
                             <i class="fas fa-lock"></i>
                         </a>
@@ -39,6 +49,11 @@
                         </a>
                     </li>
                     {% else %}
+                    <li>
+                        <a href="{% url 'register' %}" class="text-light px-2">
+                            <i class="fas fa-key"></i>
+                        </a>
+                    </li>
                     <li>
                         <a href="{% url 'login' %}" class="text-light px-2">
                             <i class="fas fa-unlock-alt"></i>
@@ -53,10 +68,21 @@
 
     <main role="main" class="flex-shrink-0">
         <div class="container">
-            <div class="col">
+                {% if messages %}
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-md-6">
+                            {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                {% endif %}
                 {% block content %}
                 {% endblock %}
-            </div>
         </div>
     </main>
 
