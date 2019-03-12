@@ -39,7 +39,7 @@
                         <a href="{% url 'profile' %}" class="text-light">{{ user.username }}</a>
                     </li>
                     <li>
-                        <a href="{% url 'logout' %}" class="text-light px-2">
+                        <a href="{% url 'logout' %}?next=/logout" class="text-light px-2">
                             <i class="fas fa-lock"></i>
                         </a>
                     </li>

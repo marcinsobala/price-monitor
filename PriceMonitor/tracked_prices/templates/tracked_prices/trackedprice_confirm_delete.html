@@ -1,7 +1,9 @@
 {% extends "tracked_prices/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="content-section">
+<div class="row">
+    <div class="col"></div>
+    <div class="col-md-6">
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
@@ -10,8 +12,10 @@
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">Yes, Delete</button>
-                <a class="btn btn-secondary" href="{% url 'tracked_prices_list' user.username %}">Cancel</a>
+                <a class="btn btn-secondary" href="{% url 'tracked_prices_list' %}">Cancel</a>
             </div>
         </form>
     </div>
+    <div class="col"></div>
+</div>
 {% endblock content %}

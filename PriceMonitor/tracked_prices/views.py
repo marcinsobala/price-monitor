@@ -45,7 +45,7 @@ def price_new(request):
             price.user = request.user
             price.last_checked_date = timezone.now()
             price.save()
-            return redirect('tracked_prices_list', username=request.user.username)
+            return redirect('tracked_prices_list')
     else:
         form = PriceForm()
 
@@ -62,7 +62,7 @@ def price_edit(request, pk):
             price.name, price.current, price.currency = name_price_currency(price.url)
             price.last_checked_date = timezone.now()
             price.save()
-            return redirect('tracked_prices_list', username=request.user.username)
+            return redirect('tracked_prices_list')
     else:
         form = PriceForm(instance=price)
 
@@ -79,5 +79,5 @@ class PriceDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return False
 
     def get_success_url(self):
-        return '/profile/' + self.request.user.username + '/'
+        return '/prices/'
 
