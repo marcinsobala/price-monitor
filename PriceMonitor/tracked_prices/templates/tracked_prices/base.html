@@ -35,28 +35,35 @@
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
-                    <li class="text-light">Hello,
-                        <a href="{% url 'profile' %}" class="text-light">{{ user.username }}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'logout' %}?next=/logout" class="text-light px-2">
-                            <i class="fas fa-lock"></i>
+                    <li class="text-light">
+                        <a href="{% url 'price_new' %}" class="nav-link">
+                            <i class="fas fa-plus-square text-light px-1"></i>
+                            Nowa cena
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'price_new' %}" class="text-light px-2">
-                            <i class="fas fa-plus-square"></i>
+                        <a href="{% url 'profile' %}" class="nav-link">
+                            <i class="fas fa-user-circle text-light px-1"></i>
+                            Profil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout' %}" class="nav-link">
+                            <i class="fas fa-lock text-light px-1"></i>
+                            Wyloguj
                         </a>
                     </li>
                     {% else %}
                     <li>
-                        <a href="{% url 'register' %}" class="text-light px-2">
-                            <i class="fas fa-key"></i>
+                        <a class="nav-link" href="{% url 'register' %}">
+                            <i class="fas fa-key text-light px-1"></i>
+                            Zarejestruj się
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'login' %}" class="text-light px-2">
-                            <i class="fas fa-unlock-alt"></i>
+                        <a class="nav-link" href="{% url 'login' %}">
+                            <i class="fas fa-unlock-alt text-light px-1"></i>
+                            Zaloguj
                         </a>
                     </li>
                     {% endif %}
