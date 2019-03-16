@@ -5,4 +5,4 @@ class PriceForm(forms.ModelForm):
 
     class Meta:
         model = TrackedPrice
-        fields = ('url', 'desired')
+        fields = ('when_inform', 'desired', 'percent_drop')
