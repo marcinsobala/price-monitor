@@ -2,6 +2,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+
     <div class="row">
         <div class="col"></div>
         <div class="col-md-6">
@@ -9,9 +10,40 @@
             <form method="post" class="post-form">
                 {% csrf_token %}
                 {{ form|crispy }}
+                <script>function add_hide()
+                {
+                    Hide();
+                    $("#id_when_inform")[0].addEventListener("change", Hide);
+                }
+                </script>
                 <button type="submit" class="save btn btn-primary">Save</button>
             </form>
         </div>
         <div class="col"></div>
     </div>
+
 {% endblock %}
+
+{% block js %}
+
+    <script>function Hide()
+    {
+        if($('#id_when_inform')[0].value == "A")
+        {
+            $('#div_id_percent_drop')[0].style.display = 'none';
+            $('#div_id_desired')[0].style.display = 'none';
+        }
+        else if($('#id_when_inform')[0].value == "B")
+        {
+            $('#div_id_percent_drop')[0].style.display = '';
+            $('#div_id_desired')[0].style.display = 'none'
+        }
+        else
+        {
+            $('#div_id_percent_drop')[0].style.display = 'none';
+            $('#div_id_desired')[0].style.display = ''
+        }
+    }
+    </script>
+
+{% endblock js %}

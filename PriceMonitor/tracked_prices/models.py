@@ -13,11 +13,12 @@ class TrackedPrice(models.Model):
     currency = models.CharField(max_length=5)
 
     CHOICES = (
-        ('A', 'Gdy cena osiągnie konkretny poziom'),
-        ('B', 'Gdy cena spadnie o x procent')
+        ('A', 'Gdy cena spadnie'),
+        ('B', 'Gdy cena spadnie o x procent'),
+        ('C', 'Gdy cena osiągnie pożądaną wartość')
     )
     when_inform = models.CharField(max_length=1, choices=CHOICES, default='A')
-    desired = models.FloatField()
+    desired = models.FloatField(default=1)
     percent_drop = models.PositiveSmallIntegerField(default=10, validators=[
         MinValueValidator(1),
         MaxValueValidator(100)

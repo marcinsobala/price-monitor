@@ -5,9 +5,8 @@
   <thead>
     <tr>
       <th scope="col">Nazwa produktu</th>
-      <th scope="col">Pożądana cena</th>
+      <th scope="col">Wyślij powiadomienie</th>
       <th scope="col">Obecna cena</th>
-      <th scope="col">Waluta</th>
       <th scope="col">Ostatnio sprawdzono</th>
       <th scope="col">Edytuj</th>
       <th scope="col">Usuń</th>
@@ -17,9 +16,14 @@
 {% for price in prices %}
     <tr>
       <td><a href ="{{price.url}}">{{price.name}}</a></td>
-      <td>{{price.desired}}</td>
-      <td>{{price.current}}</td>
-      <td>{{price.currency}}</td>
+      {% if price.when_inform == "A" %}
+      <td>{{price.get_when_inform_display}}</td>
+      {% elif price.when_inform == "B" %}
+      <td>Gdy cena spadnie o {{price.percent_drop}}%</td>
+      {% else %}
+      <td>Gdy cena spadnie do {{price.current}} {{price.currency}}</td>
+      {% endif %}
+      <td style="width: 10%">{{price.current}} {{price.currency}}</td>
       <td>{{ price.last_checked_date|date:"d.m.Y" }}</td>
       <td>
         <a class="text-dark" href="{% url 'price_edit' pk=price.pk %}">

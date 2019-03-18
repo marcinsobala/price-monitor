@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import TrackedPrice, Shop
-from .forms import PriceForm
+from .forms import NewPriceForm, EditPriceForm
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.views.generic import DeleteView
@@ -38,7 +38,7 @@ def price_detail(request, pk):
 @login_required
 def price_new(request):
     if request.method == "POST":
-        form = PriceForm(request.POST)
+        form = NewPriceForm(request.POST)
         if form.is_valid():
             price = form.save(commit=False)
             price.name, price.current, price.currency = name_price_currency(price.url)
@@ -47,7 +47,7 @@ def price_new(request):
             price.save()
             return redirect('tracked_prices_list')
     else:
-        form = PriceForm()
+        form = NewPriceForm()
 
     return render(request, 'tracked_prices/price_new.html', {'form': form})
 
@@ -56,15 +56,18 @@ def price_new(request):
 def price_edit(request, pk):
     price = get_object_or_404(TrackedPrice, pk=pk)
     if request.method == "POST":
-        form = PriceForm(request.POST, instance=price)
+        form = EditPriceForm(request.POST, instance=price)
         if form.is_valid():
             price = form.save(commit=False)
-            price.name, price.current, price.currency = name_price_currency(price.url)
-            price.last_checked_date = timezone.now()
+            # Not sure if I want price to be updated every time user makes an edit
+            # a = price.name
+            # price.name, price.current, price.currency = name_price_currency(price.url)
+            # price.name = a
+            # price.last_checked_date = timezone.now()
             price.save()
             return redirect('tracked_prices_list')
     else:
-        form = PriceForm(instance=price)
+        form = EditPriceForm(instance=price)
 
     return render(request, 'tracked_prices/price_edit.html', {'form': form})
 
