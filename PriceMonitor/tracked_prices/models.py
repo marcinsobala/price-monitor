@@ -31,7 +31,7 @@ class TrackedPrice(models.Model):
         self.save()
 
     def __str__(self):
-        return self.url[:50]
+        return self.name
 
 
 class Shop(models.Model):

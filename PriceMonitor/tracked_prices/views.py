@@ -5,8 +5,11 @@ from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.views.generic import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from . scrape import name_price_currency
 from django.contrib.auth.models import User
+import sys
+sys.path.append('..')
+from scrape import get_name_currency, get_price
+
 
 
 def home(request):
@@ -14,7 +17,8 @@ def home(request):
 
 
 def pufcia(request):
-    return render(request, 'tracked_prices/pufcia.html')
+    prices = shit()
+    return render(request, 'tracked_prices/pufcia.html', {'prices': prices})
 
 
 def sklepy(request):
@@ -30,18 +34,14 @@ def tracked_prices_list(request):
     return render(request, 'tracked_prices/tracked_prices_list.html', {'prices': prices})
 
 
-def price_detail(request, pk):
-    price = get_object_or_404(TrackedPrice, pk=pk)
-    return render(request, 'tracked_prices/price_detail.html', {'price': price})
-
-
 @login_required
 def price_new(request):
     if request.method == "POST":
         form = NewPriceForm(request.POST)
         if form.is_valid():
             price = form.save(commit=False)
-            price.name, price.current, price.currency = name_price_currency(price.url)
+            price.name, price.currency = get_name_currency(price.url)
+            price.current = get_price(price.url)
             price.user = request.user
             price.last_checked_date = timezone.now()
             price.save()
