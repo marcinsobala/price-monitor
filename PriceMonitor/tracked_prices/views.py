@@ -8,7 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 import sys
 sys.path.append('..')
-from scrape import get_name_currency, get_price
+from scrape import get_name_price_currency, shit, update_current_prices
 
 
 
@@ -17,6 +17,7 @@ def home(request):
 
 
 def pufcia(request):
+    update_current_prices()
     prices = shit()
     return render(request, 'tracked_prices/pufcia.html', {'prices': prices})
 
@@ -40,8 +41,7 @@ def price_new(request):
         form = NewPriceForm(request.POST)
         if form.is_valid():
             price = form.save(commit=False)
-            price.name, price.currency = get_name_currency(price.url)
-            price.current = get_price(price.url)
+            price.name, price.current, price.currency = get_name_price_currency(price.url)
             price.user = request.user
             price.last_checked_date = timezone.now()
             price.save()
