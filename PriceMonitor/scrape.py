@@ -8,7 +8,7 @@ from django.conf import settings
 django.setup()
 
 from django.utils import timezone
-from django.db import Q
+from django.db.models import Q
 from tracked_prices.models import TrackedPrice
 from users.models import User
 
@@ -87,9 +87,11 @@ def scrape_current_prices():
 # If difference is found between scraped and current price in db, price is updated
 def update_current_prices():
     for scraped_price in scrape_current_prices():
-        TrackedPrice.objects.filter(url=scraped_price['url'], ~Q(current=scraped_price['current'])).update(
-            current=scraped_price['current'],
-            last_checked_date=timezone.now())
+        TrackedPrice.objects\
+            .filter(~Q(current=scraped_price['url']),
+                    url=scraped_price['url'])\
+            .update(current=scraped_price['current'],
+                    last_checked_date=timezone.now())
 
 
 def prepare_emails():
@@ -101,6 +103,8 @@ def main():
     update_current_prices()
     updated_prices = tracked_price_data()
 
+# Remember to use positional arguments first, then keywords
+# print(TrackedPrice.objects.filter(~Q(current__gte=3000), url="https://allegro.pl/oferta/gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-7820820756").count())
 
 
 # unique_urls = set(TrackedPrice.objects.values_list('url'))
