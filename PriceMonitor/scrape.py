@@ -7,6 +7,8 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.settings')
 from django.conf import settings
 django.setup()
 
+from django.utils import timezone
+from django.db import Q
 from tracked_prices.models import TrackedPrice
 from users.models import User
 
@@ -71,7 +73,8 @@ def shit():
 
 # Returns query set of all necessary tracked price data
 def tracked_price_data():
-    return TrackedPrice.objects.values('id', 'url', 'current', 'desired', 'user_id', 'last_checked_date')
+    return TrackedPrice.objects.values('url', 'current', 'desired',
+                                       'percent_drop', 'user_id', 'when_inform')
 
 
 # Returns a generator of urls and their new prices dictionary
@@ -83,42 +86,23 @@ def scrape_current_prices():
 
 # If difference is found between scraped and current price in db, price is updated
 def update_current_prices():
-    old_prices = tracked_price_data()
     for scraped_price in scrape_current_prices():
-        TrackedPrice.objects.filter(url=scraped_price['url']).update(current=scraped_price['current'])
-    new_prices = tracked_price_data()
+        TrackedPrice.objects.filter(url=scraped_price['url'], ~Q(current=scraped_price['current'])).update(
+            current=scraped_price['current'],
+            last_checked_date=timezone.now())
+
+
+def prepare_emails():
+    pass
+
+
+def main():
+    prices = tracked_price_data()
+    update_current_prices()
+    updated_prices = tracked_price_data()
 
 
 
-
-# Algorithm first draft
-
-# def is_obsolete(date):
-#     pass
-#
-# def update_current_price():
-#     pass
-#
-#
-# def send_mail():
-#     pass
-#
-#
-# def del_url():
-#     pass
-#
-#
-# urls = get_urls()
-# urls_checked = {}
-#
-# for url in urls:
-#
-#     if is_obsolete(urls[url][4]):
-#         continue
-#
-#     if url not in urls_checked:
-#         urls_checked[url] = get_price(url)
-#         update_current_price()
-#
-#     if urls_checked[url] <= urls[url][0]:
-#         send_mail(urls[url][3])
+# unique_urls = set(TrackedPrice.objects.values_list('url'))
+# for i in ({'url': k[0], 'current': get_price(k[0])} for k in unique_urls):
+#     print(i)

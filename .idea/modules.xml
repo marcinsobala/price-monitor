@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../Django Schafer Tutorial/.idea/Django Schafer Tutorial.iml" filepath="$PROJECT_DIR$/../Django Schafer Tutorial/.idea/Django Schafer Tutorial.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Price-Monitor.iml" filepath="$PROJECT_DIR$/.idea/Price-Monitor.iml" />
     </modules>
   </component>
