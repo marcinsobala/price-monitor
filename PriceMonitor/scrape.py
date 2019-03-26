@@ -1,7 +1,7 @@
 import requests, re
 from lxml import html
 
-#Following 4 lines enable scrape.py to use Django ORM
+# Following 4 lines enable scrape.py to use Django ORM
 import os, django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.settings')
 from django.conf import settings
@@ -10,7 +10,7 @@ django.setup()
 from django.utils import timezone
 from django.db.models import Q
 from tracked_prices.models import TrackedPrice
-from users.models import User
+from django.contrib.auth.models import User
 
 
 def get_html_content(url):
@@ -73,27 +73,55 @@ def shit():
 
 # Returns query set of all necessary tracked price data
 def tracked_price_data():
-    return TrackedPrice.objects.values('url', 'current', 'desired',
-                                       'percent_drop', 'user_id', 'when_inform')
+    return TrackedPrice.objects.values('id', 'user_id', 'when_inform', 'current',
+                                       'desired', 'percent_drop', 'url')
 
 
-# Returns a generator of urls and their new prices dictionary
-def scrape_current_prices():
-    unique_urls = set(TrackedPrice.objects.values_list('url'))
-    for url in unique_urls:
-        yield {'url': url[0], 'current': get_price(url[0])}
+# Unnecessary? Replaced by adding one line in next function
+# # Returns a generator of urls and their new prices dictionaries
+# def scrape_current_prices():
+#     unique_urls = set(TrackedPrice.objects.values_list('url'))
+#     for url in unique_urls:
+#         yield {'url': url[0], 'current': get_price(url[0])}
 
 
-# If difference is found between scraped and current price in db, price is updated
+# TODO Multithreading!
+# Updates prices current value and last checked date but checks only unique urls
 def update_current_prices():
-    for scraped_price in scrape_current_prices():
+    unique_urls = set(TrackedPrice.objects.values_list('url'))
+    for scraped_price in ({'url': url[0], 'current': get_price(url[0])} for url in unique_urls):
         TrackedPrice.objects\
-            .filter(~Q(current=scraped_price['url']),
-                    url=scraped_price['url'])\
+            .filter(url=scraped_price['url'])\
             .update(current=scraped_price['current'],
                     last_checked_date=timezone.now())
 
 
+# Checks if prices dropped according to users wish and returns a list of prices id's where it happened
+def is_price_satisfactory(old_prices):
+    id_list = []
+    new_prices = TrackedPrice.objects.values("current")
+
+    for i in range(len(old_prices)):
+        if new_prices[i]['current'] < old_prices[i]['current']:
+
+            # Price has to drop
+            if old_prices[i]["when_inform"] == "A":
+                id_list.append(old_prices[i]['id'])
+
+            # Price has to drop by a percent
+            elif old_prices[i]["when_inform"] == "B":
+                if new_prices[i]['current'] <= old_prices[i]['desired'] * (1 - old_prices[i]['percent_drop'] / 100):
+                    id_list.append(old_prices[i]['id'])
+
+            # Price has to drop to a desired value
+            elif old_prices[i]["when_inform"] == "C":
+                if new_prices[i]['current'] <= old_prices[i]['desired']:
+                    id_list.append(old_prices[i]['id'])
+
+    return id_list
+
+
+# Returns list of email dictionaries with addresses and prepared messages
 def prepare_emails():
     pass
 
@@ -103,10 +131,8 @@ def main():
     update_current_prices()
     updated_prices = tracked_price_data()
 
+is_price_satisfactory(tracked_price_data())
+
 # Remember to use positional arguments first, then keywords
 # print(TrackedPrice.objects.filter(~Q(current__gte=3000), url="https://allegro.pl/oferta/gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-7820820756").count())
 
-
-# unique_urls = set(TrackedPrice.objects.values_list('url'))
-# for i in ({'url': k[0], 'current': get_price(k[0])} for k in unique_urls):
-#     print(i)

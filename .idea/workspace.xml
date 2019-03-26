@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0295410-c6ce-4e4b-ad67-9c42eba44c28" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Price-Monitor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Price-Monitor.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PriceMonitor/scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/scrape.py" afterDir="false" />
     </list>
@@ -21,7 +19,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="187">
               <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
@@ -33,7 +31,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="102">
               <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -57,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="340">
+              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -69,11 +67,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+            <state relative-caret-position="399">
+              <caret line="116" column="52" lean-forward="true" selection-start-line="116" selection-start-column="52" selection-end-line="116" selection-end-column="52" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#566#1745#0" />
+                <element signature="e#412#491#0" />
+                <element signature="e#597#1776#0" />
+                <element signature="e#1875#2436#0" />
+                <element signature="e#2455#2488#0" />
               </folding>
             </state>
           </provider>
@@ -140,12 +141,12 @@
         <option value="$PROJECT_DIR$/PriceMonitor/users/signals.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/pufcia.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/tracked_prices_list.html" />
-        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/scrape.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/scrape.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py" />
       </list>
     </option>
   </component>
@@ -161,6 +162,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,7 +179,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -279,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553288486470</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Used Q query to add condition to query that scraped price must be different from database price in order to update it in db">
+      <created>1553539317315</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1553539317315</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -293,10 +301,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Structure" order="0" sideWeight="0.5048387" side_tool="true" weight="0.1227608" />
-      <window_info id="Favorites" order="1" sideWeight="0.5016234" side_tool="true" weight="0.18890075" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4951613" visible="true" weight="0.1227608" />
+      <window_info id="Structure" order="0" sideWeight="0.5071942" side_tool="true" weight="0.1227608" />
+      <window_info id="Favorites" order="1" sideWeight="0.50569105" side_tool="true" weight="0.1227608" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49280575" visible="true" weight="0.1227608" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32502708" />
@@ -305,9 +314,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32827735" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32827735" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49947312" weight="0.3336945" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49947312" visible="true" weight="0.3336945" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052685" side_tool="true" weight="0.34994584" />
-      <window_info anchor="bottom" id="Python Console" order="10" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32827735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -380,7 +389,8 @@
       <path value="$PROJECT_DIR$/PriceMonitor" />
     </ignored-roots>
     <MESSAGE value="1. New price view now gets all price data in one request, as before. 2. Simplified xpath selectors for names and prices 3. Created functions that scrape current prices for urls and updates them in database." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. New price view now gets all price data in one request, as before. 2. Simplified xpath selectors for names and prices 3. Created functions that scrape current prices for urls and updates them in database." />
+    <MESSAGE value="Used Q query to add condition to query that scraped price must be different from database price in order to update it in db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Used Q query to add condition to query that scraped price must be different from database price in order to update it in db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -697,7 +707,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="187">
           <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
@@ -707,7 +717,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="102">
           <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -727,8 +737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="340">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -737,11 +747,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+        <state relative-caret-position="399">
+          <caret line="116" column="52" lean-forward="true" selection-start-line="116" selection-start-column="52" selection-end-line="116" selection-end-column="52" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#566#1745#0" />
+            <element signature="e#412#491#0" />
+            <element signature="e#597#1776#0" />
+            <element signature="e#1875#2436#0" />
+            <element signature="e#2455#2488#0" />
           </folding>
         </state>
       </provider>
