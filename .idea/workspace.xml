@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0295410-c6ce-4e4b-ad67-9c42eba44c28" name="Default Changelist" comment="">
+    <list default="true" id="b0295410-c6ce-4e4b-ad67-9c42eba44c28" name="Default Changelist" comment="Removed Q query, because even if price is no different, last_checked_date has to be updated. Merged scraped_prices function into update_prices function as a generator. Prepared a function that returns a list of ids for prices that dropped in a way satisfying for the user.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PriceMonitor/scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/scrape.py" afterDir="false" />
     </list>
@@ -55,7 +55,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="289">
               <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -67,14 +67,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="116" column="52" lean-forward="true" selection-start-line="116" selection-start-column="52" selection-end-line="116" selection-end-column="52" />
+            <state relative-caret-position="397">
+              <caret line="148" column="33" lean-forward="true" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#412#491#0" />
-                <element signature="e#597#1776#0" />
-                <element signature="e#1875#2436#0" />
-                <element signature="e#2455#2488#0" />
+                <element signature="e#612#1791#0" />
+                <element signature="e#1890#2451#0" />
               </folding>
             </state>
           </provider>
@@ -145,8 +143,8 @@
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/scrape.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py" />
-        <option value="$PROJECT_DIR$/PriceMonitor/scrape.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/scrape.py" />
       </list>
     </option>
   </component>
@@ -162,7 +160,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -179,6 +176,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553539317315</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Removed Q query, because even if price is no different, last_checked_date has to be updated. Merged scraped_prices function into update_prices function as a generator. Prepared a function that returns a list of ids for prices that dropped in a way satisfying for the user.">
+      <created>1553632281713</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1553632281713</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -385,12 +390,14 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/PriceMonitor" />
     </ignored-roots>
     <MESSAGE value="1. New price view now gets all price data in one request, as before. 2. Simplified xpath selectors for names and prices 3. Created functions that scrape current prices for urls and updates them in database." />
     <MESSAGE value="Used Q query to add condition to query that scraped price must be different from database price in order to update it in db" />
-    <option name="LAST_COMMIT_MESSAGE" value="Used Q query to add condition to query that scraped price must be different from database price in order to update it in db" />
+    <MESSAGE value="Removed Q query, because even if price is no different, last_checked_date has to be updated. Merged scraped_prices function into update_prices function as a generator. Prepared a function that returns a list of ids for prices that dropped in a way satisfying for the user." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Q query, because even if price is no different, last_checked_date has to be updated. Merged scraped_prices function into update_prices function as a generator. Prepared a function that returns a list of ids for prices that dropped in a way satisfying for the user." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -404,9 +411,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/users/templates/users/register.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/blog/templates/blog/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -737,7 +741,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="289">
           <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -745,16 +749,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/operator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="272" column="8" selection-start-line="272" selection-start-column="8" selection-end-line="272" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="116" column="52" lean-forward="true" selection-start-line="116" selection-start-column="52" selection-end-line="116" selection-end-column="52" />
+        <state relative-caret-position="397">
+          <caret line="148" column="33" lean-forward="true" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#412#491#0" />
-            <element signature="e#597#1776#0" />
-            <element signature="e#1875#2436#0" />
-            <element signature="e#2455#2488#0" />
+            <element signature="e#612#1791#0" />
+            <element signature="e#1890#2451#0" />
           </folding>
         </state>
       </provider>

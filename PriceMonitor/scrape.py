@@ -11,6 +11,7 @@ from django.utils import timezone
 from django.db.models import Q
 from tracked_prices.models import TrackedPrice
 from django.contrib.auth.models import User
+from operator import itemgetter
 
 
 def get_html_content(url):
@@ -90,13 +91,14 @@ def tracked_price_data():
 def update_current_prices():
     unique_urls = set(TrackedPrice.objects.values_list('url'))
     for scraped_price in ({'url': url[0], 'current': get_price(url[0])} for url in unique_urls):
-        TrackedPrice.objects\
-            .filter(url=scraped_price['url'])\
+        TrackedPrice.objects \
+            .filter(url=scraped_price['url']) \
             .update(current=scraped_price['current'],
                     last_checked_date=timezone.now())
 
 
-# Checks if prices dropped according to users wish and returns a list of prices id's where it happened
+# Checks if prices dropped according to users wish and returns a list of tuples
+# with prices id's and users id's sorted by users id's
 def is_price_satisfactory(old_prices):
     id_list = []
     new_prices = TrackedPrice.objects.values("current")
@@ -106,24 +108,48 @@ def is_price_satisfactory(old_prices):
 
             # Price has to drop
             if old_prices[i]["when_inform"] == "A":
-                id_list.append(old_prices[i]['id'])
+                id_list.append((old_prices[i]['id'], old_prices[i]['user_id']))
 
             # Price has to drop by a percent
             elif old_prices[i]["when_inform"] == "B":
                 if new_prices[i]['current'] <= old_prices[i]['desired'] * (1 - old_prices[i]['percent_drop'] / 100):
-                    id_list.append(old_prices[i]['id'])
+                    id_list.append((old_prices[i]['id'], old_prices[i]['user_id']))
 
             # Price has to drop to a desired value
-            elif old_prices[i]["when_inform"] == "C":
+            elif old_prices[i]['when_inform'] == "C":
                 if new_prices[i]['current'] <= old_prices[i]['desired']:
-                    id_list.append(old_prices[i]['id'])
+                    id_list.append((old_prices[i]['id'], old_prices[i]['user_id']))
 
-    return id_list
+    return id_list.sort(key=itemgetter(1))
 
 
-# Returns list of email dictionaries with addresses and prepared messages
-def prepare_emails():
-    pass
+# Returns list of dictionaries with email addresses and prepared messages
+def prepare_emails(prices_users_IDs):
+    i = -1
+    prepared_emails = []
+    previous_user_id = ""
+
+    for id, user_id in prices_users_IDs:
+        price = TrackedPrice.objects.get(id=id)
+        message = f"Cena {price.name} spadła do {price.current} {price.currency}!\n"
+
+        # Appends to previous message if it's the price belonging to the same user,
+        # otherwise creates a new message
+        if user_id != previous_user_id:
+            user = User.objects.get (id=user_id)
+            message = f"{user.username},\n\n{message}"
+            prepared_emails.append({'email': user.email,
+                                    'subject': "Śledzone ceny spadły!",
+                                    'message': message})
+            i += 1
+            previous_user_id = user_id
+        else:
+            prepared_emails[i]['message'] += message
+
+    for email in prepared_emails:
+        email['message'] += 'Udanych zakupów, \nZespół Cebula Hunter'
+
+    return prepared_emails
 
 
 def main():
@@ -131,7 +157,7 @@ def main():
     update_current_prices()
     updated_prices = tracked_price_data()
 
-is_price_satisfactory(tracked_price_data())
+# is_price_satisfactory(tracked_price_data())
 
 # Remember to use positional arguments first, then keywords
 # print(TrackedPrice.objects.filter(~Q(current__gte=3000), url="https://allegro.pl/oferta/gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-7820820756").count())
