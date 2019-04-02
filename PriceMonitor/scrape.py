@@ -8,7 +8,7 @@ from django.conf import settings
 django.setup()
 
 from django.utils import timezone
-from django.db.models import Q
+from django.core.mail import send_mail
 from tracked_prices.models import TrackedPrice
 from django.contrib.auth.models import User
 from operator import itemgetter
@@ -18,7 +18,7 @@ def get_html_content(url):
     pageContent = requests.get(url)
     return html.fromstring(pageContent.content)
 
-# TODO - is currency necessary? May need to regex jsons to get it
+# TODO - is currency necessary? May need to regex jsons to get it / Dict, not if elif
 def get_name_price_currency(url):
     tree = get_html_content(url)
     if "allegro.pl" in url:
@@ -49,7 +49,7 @@ def get_name_price_currency(url):
 
     return name[0], price, currency[0]
 
-
+# TODO - dict, not if elif
 # scrapes html for a price location, then regexes it to specific format
 def get_price(url):
     tree = get_html_content(url)
@@ -69,28 +69,18 @@ def get_price(url):
     return re.sub(r',', '.', price)
 
 
-def shit():
-    return TrackedPrice.objects.all()
-
 # Returns query set of all necessary tracked price data
 def tracked_price_data():
     return TrackedPrice.objects.values('id', 'user_id', 'when_inform', 'current',
                                        'desired', 'percent_drop', 'url')
 
 
-# Unnecessary? Replaced by adding one line in next function
-# # Returns a generator of urls and their new prices dictionaries
-# def scrape_current_prices():
-#     unique_urls = set(TrackedPrice.objects.values_list('url'))
-#     for url in unique_urls:
-#         yield {'url': url[0], 'current': get_price(url[0])}
-
-
 # TODO Multithreading!
 # Updates prices current value and last checked date but checks only unique urls
 def update_current_prices():
-    unique_urls = set(TrackedPrice.objects.values_list('url'))
-    for scraped_price in ({'url': url[0], 'current': get_price(url[0])} for url in unique_urls):
+    unique_urls = TrackedPrice.objects.values_list('url').distinct()
+    scraped_prices = ({'url': url[0], 'current': get_price(url[0])} for url in unique_urls)
+    for scraped_price in scraped_prices:
         TrackedPrice.objects \
             .filter(url=scraped_price['url']) \
             .update(current=scraped_price['current'],
@@ -120,7 +110,8 @@ def is_price_satisfactory(old_prices):
                 if new_prices[i]['current'] <= old_prices[i]['desired']:
                     id_list.append((old_prices[i]['id'], old_prices[i]['user_id']))
 
-    return id_list.sort(key=itemgetter(1))
+    id_list.sort(key=itemgetter(1))
+    return id_list
 
 
 # Returns list of dictionaries with email addresses and prepared messages
@@ -152,13 +143,28 @@ def prepare_emails(prices_users_IDs):
     return prepared_emails
 
 
-def main():
-    prices = tracked_price_data()
+def send_mails(prepared_emails):
+    email_from = settings.EMAIL_HOST_USER
+    password = settings.EMAIL_HOST_PASSWORD
+    for message in prepared_emails:
+        send_mail(message['subject'],
+                  message['message'],
+                  message['email'],
+                  recipient_list=[email_from],
+                  auth_password=password)
+
+
+# updates prices and sends out emails if prices are now satisfactory for the user
+def price_drop_inform():
+    old_prices = list(tracked_price_data())
     update_current_prices()
-    updated_prices = tracked_price_data()
+    prices_users_IDs = is_price_satisfactory(old_prices)
 
-# is_price_satisfactory(tracked_price_data())
+    # No point in running these functions if no prices are satisfactory
+    if prices_users_IDs:
+        prepared_emails = prepare_emails(prices_users_IDs)
+        send_mails(prepared_emails)
 
-# Remember to use positional arguments first, then keywords
-# print(TrackedPrice.objects.filter(~Q(current__gte=3000), url="https://allegro.pl/oferta/gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-7820820756").count())
+
+
 

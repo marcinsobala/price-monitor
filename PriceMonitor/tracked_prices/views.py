@@ -8,7 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 import sys
 sys.path.append('..')
-from scrape import get_name_price_currency, shit, update_current_prices
+from scrape import get_name_price_currency, price_drop_inform
 
 
 
@@ -17,9 +17,8 @@ def home(request):
 
 
 def pufcia(request):
-    update_current_prices()
-    prices = shit()
-    return render(request, 'tracked_prices/pufcia.html', {'prices': prices})
+    price_drop_inform()
+    return render(request, 'tracked_prices/pufcia.html')
 
 
 def sklepy(request):
