@@ -6,10 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
-import sys
-sys.path.append('..')
-from scrape import get_name_price_currency, price_drop_inform
-
+from scrape_prices.scrape import get_name_price_currency, price_drop_inform
 
 
 def home(request):

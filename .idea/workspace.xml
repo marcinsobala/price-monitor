@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0295410-c6ce-4e4b-ad67-9c42eba44c28" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PriceMonitor/scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/scrape.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,25 +19,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
+        <entry file="file://$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="231">
+              <caret line="39" column="12" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -44,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            <state relative-caret-position="255">
+              <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -53,31 +39,36 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="152" column="46" lean-forward="true" selection-start-line="152" selection-start-column="46" selection-end-line="152" selection-end-column="46" />
+            <state relative-caret-position="153">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
-                <element signature="e#459#538#0" />
-                <element signature="e#644#1823#0" />
-                <element signature="e#709#908#0" />
-                <element signature="e#946#1159#0" />
-                <element signature="e#1199#1444#0" />
-                <element signature="e#1484#1638#0" />
-                <element signature="e#1922#2483#0" />
-                <element signature="e#3481#4436#0" />
-                <element signature="e#4511#4651#0" />
+                <element signature="e#0#64#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="136" selection-start-line="136" selection-end-line="136" selection-end-column="19" />
+            <state relative-caret-position="282">
+              <caret line="154" column="57" lean-forward="true" selection-start-line="154" selection-start-column="57" selection-end-line="154" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#520#1524#0" />
+                <element signature="e#537#616#0" />
+                <element signature="e#657#1180#0" />
+                <element signature="e#1207#1466#0" />
+                <element signature="e#1555#1705#0" />
+                <element signature="e#1845#2229#0" />
+                <element signature="e#2410#3365#0" />
+                <element signature="e#3484#4431#0" />
+                <element signature="e#4471#4789#0" />
+                <element signature="e#4945#5262#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,8 +78,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -101,6 +92,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -143,20 +135,26 @@
         <option value="$PROJECT_DIR$/PriceMonitor/users/signals.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/pufcia.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/tracked_prices_list.html" />
-        <option value="$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/scrape.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py" />
-        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/venv/shops_xpaths.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/shops xpaths.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/shops_xpaths.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/scrape.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/scrape/scrape.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/shops_xpaths.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="892" />
+    <option name="width" value="1035" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -164,7 +162,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,10 +169,34 @@
               <item name="Price-Monitor" type="b2602c69:ProjectViewProjectNode" />
               <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Price-Monitor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
+              <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Price-Monitor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
+              <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
+              <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Price-Monitor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
+              <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
+              <item name="scrape_prices" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Price-Monitor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
+              <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
+              <item name="tracked_prices" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -186,11 +207,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marci\Desktop\Projekty\Programowanie\Własne projekty\Price-Monitor\PriceMonitor\scrape" />
       <recent name="C:\Users\marci\Desktop\Projekty\Programowanie\Własne projekty\Price-Monitor\PriceMonitor" />
       <recent name="C:\Users\marci\Desktop\Projekty\Programowanie\Własne projekty\Price-Monitor\PriceMonitor\users" />
       <recent name="C:\Users\marci\Desktop\Projekty\Programowanie\Własne projekty\Price-Monitor\PriceMonitor\users\templates\users" />
       <recent name="C:\Users\marci\Desktop\Projekty\Programowanie\Własne projekty\Price-Monitor\PriceMonitor\users\templates" />
-      <recent name="C:\Users\marci\Desktop\Projekty\Programowanie\Własne projekty\Price-Monitor\PriceMonitor\tracked_prices\templates\registration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\marci\Desktop\Projekty\Programowanie\Własne projekty\Price-Monitor\PriceMonitor\users\templates\users" />
@@ -209,7 +230,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.scrape">
+  <component name="RunManager" selected="Python.scrape (1)">
     <configuration name="django-admin" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Price-Monitor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -231,6 +252,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="scrape (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Price-Monitor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PriceMonitor/scrape_prices" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="scrape" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Price-Monitor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -243,7 +285,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\marci\Desktop\Projekty\Programowanie\Własne projekty\Price-Monitor\PriceMonitor\scrape.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\marci\Desktop\Projekty\Programowanie\Własne projekty\Price-Monitor\PriceMonitor\scrape\scrape.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="shops_xpaths" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Price-Monitor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PriceMonitor" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\marci\Desktop\Projekty\Programowanie\Własne projekty\Price-Monitor\PriceMonitor\scrape\shops_xpaths.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -254,7 +317,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.scrape (1)" />
         <item itemvalue="Python.scrape" />
+        <item itemvalue="Python.shops_xpaths" />
         <item itemvalue="Python.django-admin" />
       </list>
     </recent_temporary>
@@ -311,22 +376,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="892" y="0" width="1035" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5071942" side_tool="true" weight="0.1227608" />
       <window_info id="Favorites" order="1" sideWeight="0.50569105" side_tool="true" weight="0.1227608" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49280575" weight="0.12065332" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49280575" weight="0.22968906" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32822758" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32502708" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39761648" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49893162" visible="true" weight="0.39715537" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32827735" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49947312" visible="true" weight="0.3336945" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052685" side_tool="true" weight="0.34994584" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49947312" weight="0.33260393" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50106835" side_tool="true" weight="0.39715537" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32822758" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -407,6 +473,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PriceMonitor/manage.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -417,36 +490,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/users/signals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/users/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="37" lean-forward="true" selection-end-line="20" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="3" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/users/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -570,13 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/PriceMonitor/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -696,16 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/utils/timezone.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -748,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="136" selection-start-line="136" selection-end-line="136" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -762,30 +781,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/venv/shops_xpaths.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="39" column="12" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/shops_xpaths.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape.py">
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="152" column="46" lean-forward="true" selection-start-line="152" selection-start-column="46" selection-end-line="152" selection-end-column="46" />
+        <state relative-caret-position="282">
+          <caret line="154" column="57" lean-forward="true" selection-start-line="154" selection-start-column="57" selection-end-line="154" selection-end-column="57" />
           <folding>
-            <element signature="e#459#538#0" />
-            <element signature="e#644#1823#0" />
-            <element signature="e#709#908#0" />
-            <element signature="e#946#1159#0" />
-            <element signature="e#1199#1444#0" />
-            <element signature="e#1484#1638#0" />
-            <element signature="e#1922#2483#0" />
-            <element signature="e#3481#4436#0" />
-            <element signature="e#4511#4651#0" />
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#520#1524#0" />
+            <element signature="e#537#616#0" />
+            <element signature="e#657#1180#0" />
+            <element signature="e#1207#1466#0" />
+            <element signature="e#1555#1705#0" />
+            <element signature="e#1845#2229#0" />
+            <element signature="e#2410#3365#0" />
+            <element signature="e#3484#4431#0" />
+            <element signature="e#4471#4789#0" />
+            <element signature="e#4945#5262#0" />
           </folding>
         </state>
       </provider>

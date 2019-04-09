@@ -1,9 +1,10 @@
 import requests, re
 from lxml import html
 
-# Following 4 lines enable scrape.py to use Django ORM
-import os, django
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.settings')
+# Following 5 lines enable scrape_prices.py to use Django ORM while server is not running
+import os, sys, django
+sys.path.append('..')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.PriceMonitor.settings')
 from django.conf import settings
 django.setup()
 
@@ -14,59 +15,55 @@ from django.contrib.auth.models import User
 from operator import itemgetter
 
 
+shop_xpaths = {'allegro.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'ceneo.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//meta[@property="og:price:amount"]/@content',
+                    'currency': '//meta[@property="og:price:currency"]/@content'},
+               'morele.net':
+                   {'name': '//*[@itemtype="http://schema.org/AggregateRating"]/div/span[@itemprop="name"]/text()',
+                    'price': '//div[@itemprop="price"]/@content',
+                    'currency': '//div[@ itemprop="priceCurrency"]/@content'},
+               'zalando.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//meta[@name="twitter:data1"]/@content',
+                    'currency': '//meta[@name="twitter:data1"]/@content'}}
+
+
 def get_html_content(url):
     pageContent = requests.get(url)
     return html.fromstring(pageContent.content)
 
-# TODO - is currency necessary? May need to regex jsons to get it / Dict, not if elif
+
 def get_name_price_currency(url):
     tree = get_html_content(url)
-    if "allegro.pl" in url:
-        name = tree.xpath('//meta[@property="og:title"]/@content')
-        price = tree.xpath('//meta[@itemprop="price"]/@content')
-        currency = tree.xpath('//meta[@itemprop="priceCurrency"]/@content')
+    shop = re.search(r'https?://(www\.)?(\w+\.\w+)', url).group(2)
 
-    elif "ceneo.pl" in url:
-        name = tree.xpath('//meta[@property="og:title"]/@content')
-        price = tree.xpath('//meta[@property="og:price:amount"]/@content')
-        currency = tree.xpath('//meta[@property="og:price:currency"]/@content')
+    name = tree.xpath(shop_xpaths[shop]['name'])[0]
+    price = tree.xpath(shop_xpaths[shop]['price'])[0]
+    currency = tree.xpath(shop_xpaths[shop]['currency'])[0]
 
-    elif "morele.net" in url:
-        name = tree.xpath('//*[@itemtype="http://schema.org/AggregateRating"]/div/span[@itemprop="name"]/text()')
-        price = tree.xpath('//div[@itemprop="price"]/@content')
-        currency = tree.xpath('//div[@ itemprop="priceCurrency"]/@content')
+    # Exceptions for websites which just can't store their metadata normally
+    if shop == 'zalando.pl': currency = currency.split()[-1]
 
-    elif "zalando.pl" in url:
-        name = tree.xpath('//meta[@property="og:title"]/@content')
-        price = tree.xpath('//meta[@name="twitter:data1"]/@content')
-        currency = ["PLN"]
-
-    if type(price) == list:
-        price = price[0]
-
-    price = re.search(r'\d+[.,]*\d*' ,price).group()
+    price = re.search(r'\d+[.,]*\d*', price).group()
     price = re.sub(r',', '.', price)
 
-    return name[0], price, currency[0]
+    return name, price, currency
 
-# TODO - dict, not if elif
-# scrapes html for a price location, then regexes it to specific format
+
 def get_price(url):
     tree = get_html_content(url)
-    if "allegro.pl" in url:
-        price = tree.xpath('//meta[@itemprop="price"]/@content')
-    elif "ceneo.pl" in url:
-        price = tree.xpath('//meta[@property="og:price:amount"]/@content')
-    elif "morele.net" in url:
-        price = tree.xpath('//div[@itemprop="price"]/@content')
-    elif "zalando.pl" in url:
-        price = tree.xpath('//meta[@name="twitter:data1"]/@content')
+    shop = re.search (r'https?://(www\.)?(\w+\.\w+)', url).group (2)
 
-    if type(price) == list:
-        price = price[0]
+    price = tree.xpath(shop_xpaths[shop]['price'])[0]
+    price = re.search(r'\d+[.,]*\d*', price).group()
+    price = re.sub(r',', '.', price)
 
-    price = re.search(r'\d+[.,]*\d*' ,price).group()
-    return re.sub(r',', '.', price)
+    return price
 
 
 # Returns query set of all necessary tracked price data
@@ -143,6 +140,7 @@ def prepare_emails(prices_users_IDs):
     return prepared_emails
 
 
+# TODO Secure password and mail
 def send_mails(prepared_emails):
     email_from = settings.EMAIL_HOST_USER
     password = settings.EMAIL_HOST_PASSWORD
@@ -166,5 +164,7 @@ def price_drop_inform():
         send_mails(prepared_emails)
 
 
-
-
+if __name__ == "__main__":
+    print('For tests purposes, man')
+    print(get_name_price_currency('https://www.zalando.pl/pier-one-bluza-rozpinana-black-pi922s028-q11.html'))
+    print(get_price('https://www.zalando.pl/pier-one-bluza-rozpinana-black-pi922s028-q11.html'))
