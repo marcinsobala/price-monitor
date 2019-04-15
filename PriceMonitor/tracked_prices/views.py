@@ -1,13 +1,12 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import TrackedPrice, Shop
-from .forms import NewPriceForm, EditPriceForm
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.views.generic import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from scrape_prices.scrape import get_name_price_currency, price_drop_inform
-
+from .models import TrackedPrice, Shop
+from .forms import NewPriceForm, EditPriceForm
 
 def home(request):
     return render(request, 'tracked_prices/home.html')

@@ -1,36 +1,24 @@
-import requests, re
+import os
+import sys
+import re
+import requests
 from lxml import html
-
-# Following 5 lines enable scrape_prices.py to use Django ORM while server is not running
-import os, sys, django
-sys.path.append('..')
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.PriceMonitor.settings')
-from django.conf import settings
-django.setup()
-
-from django.utils import timezone
-from django.core.mail import send_mail
-from tracked_prices.models import TrackedPrice
-from django.contrib.auth.models import User
 from operator import itemgetter
 
+import django
+from django.utils import timezone
+from django.core.mail import send_mail
 
-shop_xpaths = {'allegro.pl':
-                   {'name': '//meta[@property="og:title"]/@content',
-                    'price': '//meta[@itemprop="price"]/@content',
-                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
-               'ceneo.pl':
-                   {'name': '//meta[@property="og:title"]/@content',
-                    'price': '//meta[@property="og:price:amount"]/@content',
-                    'currency': '//meta[@property="og:price:currency"]/@content'},
-               'morele.net':
-                   {'name': '//*[@itemtype="http://schema.org/AggregateRating"]/div/span[@itemprop="name"]/text()',
-                    'price': '//div[@itemprop="price"]/@content',
-                    'currency': '//div[@ itemprop="priceCurrency"]/@content'},
-               'zalando.pl':
-                   {'name': '//meta[@property="og:title"]/@content',
-                    'price': '//meta[@name="twitter:data1"]/@content',
-                    'currency': '//meta[@name="twitter:data1"]/@content'}}
+# TODO remove before deployment. No need to set up environemnt when site is up
+# Following 3 lines enable module to use Django ORM  and app imports
+sys.path.append('..')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.PriceMonitor.settings')
+django.setup()
+
+from django.conf import settings
+from django.contrib.auth.models import User
+from tracked_prices.models import TrackedPrice
+from scrape_prices import shop_xpaths
 
 
 def get_html_content(url):
