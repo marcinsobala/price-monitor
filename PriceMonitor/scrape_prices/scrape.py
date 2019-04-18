@@ -2,6 +2,9 @@ import os
 import sys
 import re
 import requests
+import time
+import asyncio
+import aiohttp
 from lxml import html
 from operator import itemgetter
 
@@ -11,9 +14,9 @@ from django.core.mail import send_mail
 
 # TODO remove before deployment. No need to set up environemnt when site is up
 # Following 3 lines enable module to use Django ORM  and app imports
-sys.path.append('..')
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.PriceMonitor.settings')
-django.setup()
+# sys.path.append('..')
+# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.PriceMonitor.settings')
+# django.setup()
 
 from django.conf import settings
 from django.contrib.auth.models import User
@@ -21,9 +24,12 @@ from tracked_prices.models import TrackedPrice
 from scrape_prices import shop_xpaths
 
 
-def get_html_content(url):
-    pageContent = requests.get(url)
-    return html.fromstring(pageContent.content)
+async def get_html_content(url, session=None):
+    if session:
+        async with session.get(url) as pageContent:
+            return html.fromstring(await pageContent.text())
+    else:
+        return html.fromstring(requests.get(url).content)
 
 
 def get_name_price_currency(url):
@@ -43,15 +49,15 @@ def get_name_price_currency(url):
     return name, price, currency
 
 
-def get_price(url):
-    tree = get_html_content(url)
+async def get_price(url, session, scraped_prices):
+    tree = await get_html_content(url, session)
     shop = re.search (r'https?://(www\.)?(\w+\.\w+)', url).group (2)
 
     price = tree.xpath(shop_xpaths[shop]['price'])[0]
     price = re.search(r'\d+[.,]*\d*', price).group()
     price = re.sub(r',', '.', price)
 
-    return price
+    scraped_prices.append((url,price))
 
 
 # Returns query set of all necessary tracked price data
@@ -60,17 +66,23 @@ def tracked_price_data():
                                        'desired', 'percent_drop', 'url')
 
 
-# TODO Multithreading!
+# TODO Multithreading! Use same session which needs sorted list
 # Updates prices current value and last checked date but checks only unique urls
-def update_current_prices():
-    unique_urls = TrackedPrice.objects.values_list('url').distinct()
-    scraped_prices = ({'url': url[0], 'current': get_price(url[0])} for url in unique_urls)
-    for scraped_price in scraped_prices:
-        TrackedPrice.objects \
-            .filter(url=scraped_price['url']) \
-            .update(current=scraped_price['current'],
-                    last_checked_date=timezone.now())
+async def update_current_prices():
+    unique_urls = TrackedPrice.objects.values_list('url').distinct().order_by('url')
+    async with aiohttp.ClientSession() as session:
+        tasks = []
+        scraped_prices = []
+        for url in unique_urls:
+            task = asyncio.create_task(get_price(url[0], session, scraped_prices))
+            tasks.append(task)
+        await asyncio.gather(*tasks, return_exceptions=True)
 
+    for price in scraped_prices:
+        TrackedPrice.objects\
+            .filter(url=price[0])\
+            .update(current=price[1],
+                     last_checked_date=timezone.now())
 
 # Checks if prices dropped according to users wish and returns a list of tuples
 # with prices id's and users id's sorted by users id's
@@ -143,7 +155,7 @@ def send_mails(prepared_emails):
 # updates prices and sends out emails if prices are now satisfactory for the user
 def price_drop_inform():
     old_prices = list(tracked_price_data())
-    update_current_prices()
+    asyncio.run(update_current_prices())
     prices_users_IDs = is_price_satisfactory(old_prices)
 
     # No point in running these functions if no prices are satisfactory
@@ -153,6 +165,8 @@ def price_drop_inform():
 
 
 if __name__ == "__main__":
-    print('For tests purposes, man')
-    print(get_name_price_currency('https://www.zalando.pl/pier-one-bluza-rozpinana-black-pi922s028-q11.html'))
-    print(get_price('https://www.zalando.pl/pier-one-bluza-rozpinana-black-pi922s028-q11.html'))
+    start_time = time.time()
+    asyncio.run(update_current_prices())
+    duration = time.time() - start_time
+    print(duration)
+    # print(get_name_price_currency('https://www.morele.net/karta-graficzna-gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-256-bit-3xhdmi-3xdp-usb-c-box-gv-n2070wf3-8gc-4142730/
