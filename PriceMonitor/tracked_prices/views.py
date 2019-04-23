@@ -22,6 +22,10 @@ def sklepy(request):
     return render(request, 'tracked_prices/shops.html', {'shops': shops})
 
 
+def search_error(request, err_message):
+    return render(request, 'tracked_prices/error_page.html',
+                   {'error': err_message})
+
 
 @login_required
 def tracked_prices_list(request):
@@ -36,7 +40,16 @@ def price_new(request):
         form = NewPriceForm(request.POST)
         if form.is_valid():
             price = form.save(commit=False)
-            price.name, price.current, price.currency = get_name_price_currency(price.url)
+
+            try:
+                price.name, price.current, price.currency = get_name_price_currency(price.url)
+            except ConnectionError:
+                return search_error(request, 'Ta strona nie istnieje')
+            except KeyError:
+                return search_error(request, 'Tego sklepu nie obsługujemy.')
+            except IndexError:
+                return search_error(request, 'Nie mogę znaleźć ceny na tej stronie :(')
+
             price.user = request.user
             price.last_checked_date = timezone.now()
             price.save()
@@ -54,11 +67,6 @@ def price_edit(request, pk):
         form = EditPriceForm(request.POST, instance=price)
         if form.is_valid():
             price = form.save(commit=False)
-            # Not sure if I want price to be updated every time user makes an edit
-            # a = price.name
-            # price.name, price.current, price.currency = name_price_currency(price.url)
-            # price.name = a
-            # price.last_checked_date = timezone.now()
             price.save()
             return redirect('tracked_prices_list')
     else:

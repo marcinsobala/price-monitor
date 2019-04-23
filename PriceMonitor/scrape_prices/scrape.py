@@ -24,12 +24,16 @@ from tracked_prices.models import TrackedPrice
 from scrape_prices import shop_xpaths
 
 
-async def get_html_content(url, session=None):
-    if session:
-        async with session.get(url) as pageContent:
-            return html.fromstring(await pageContent.text())
-    else:
+async def get_html_content_async(url, session):
+    async with session.get(url) as pageContent:
+        return html.fromstring(await pageContent.text())
+
+
+def get_html_content(url):
+    try:
         return html.fromstring(requests.get(url).content)
+    except requests.exceptions.RequestException:
+        raise ConnectionError
 
 
 def get_name_price_currency(url):
@@ -50,7 +54,7 @@ def get_name_price_currency(url):
 
 
 async def get_price(url, session, scraped_prices):
-    tree = await get_html_content(url, session)
+    tree = await get_html_content_async(url, session)
     shop = re.search (r'https?://(www\.)?(\w+\.\w+)', url).group (2)
 
     price = tree.xpath(shop_xpaths[shop]['price'])[0]
@@ -66,7 +70,6 @@ def tracked_price_data():
                                        'desired', 'percent_drop', 'url')
 
 
-# TODO Multithreading! Use same session which needs sorted list
 # Updates prices current value and last checked date but checks only unique urls
 async def update_current_prices():
     unique_urls = TrackedPrice.objects.values_list('url').distinct().order_by('url')
@@ -119,7 +122,7 @@ def prepare_emails(prices_users_IDs):
 
     for id, user_id in prices_users_IDs:
         price = TrackedPrice.objects.get(id=id)
-        message = f"Cena {price.name} spadła do {price.current} {price.currency}!\n"
+        message = f"Cena {price.name} spadła do {price.current} {price.currency}!\n\n"
 
         # Appends to previous message if it's the price belonging to the same user,
         # otherwise creates a new message
