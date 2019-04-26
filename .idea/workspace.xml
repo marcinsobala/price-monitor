@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0295410-c6ce-4e4b-ad67-9c42eba44c28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/error_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Price-Monitor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Price-Monitor.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" afterDir="false" />
     </list>
+    <ignored path="PriceMonitor/venv/" />
+    <ignored path="PriceMonitor/PriceMonitor/settings.py" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+            <state relative-caret-position="2227">
+              <caret line="131" column="14" selection-start-line="131" selection-start-column="14" selection-end-line="131" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -40,22 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="68">
               <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -67,10 +57,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="50" column="36" lean-forward="true" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+            <state relative-caret-position="578">
+              <caret line="124" column="99" selection-start-line="124" selection-start-column="99" selection-end-line="124" selection-end-column="99" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#232#310#0" />
+                <element signature="e#726#826#0" />
+                <element signature="e#860#1001#0" />
+                <element signature="e#1042#1568#0" />
+                <element signature="e#1626#1929#0" />
+                <element signature="e#2018#2168#0" />
+                <element signature="e#2291#2868#0" />
+                <element signature="e#2431#2676#0" />
+                <element signature="e#2514#2615#0" />
+                <element signature="e#2719#2868#0" />
+                <element signature="e#2870#2949#0" />
+                <element signature="e#3048#4003#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,8 +94,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -100,8 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/users/apps.py" />
-        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/home.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/price_detail.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/admin.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/sklepy.html" />
@@ -147,9 +158,11 @@
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/test.py" />
-        <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/error_page.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/requirements.txt" />
+        <option value="$PROJECT_DIR$/PriceMonitor/puu.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" />
       </list>
     </option>
@@ -165,7 +178,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,35 +194,21 @@
               <item name="Price-Monitor" type="b2602c69:ProjectViewProjectNode" />
               <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
               <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
-              <item name="tracked_prices" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Price-Monitor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
-              <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
-              <item name="tracked_prices" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Price-Monitor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
-              <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
-              <item name="tracked_prices" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="tracked_prices" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Django Schafer Tutorial" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -413,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555621724027</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Error handled situations where price or site may not be found. Created basic html template for err message and function in views that show it. Separated get_html_content function to async and normal version.">
+      <created>1556047725502</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556047725502</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -431,7 +436,7 @@
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5071942" side_tool="true" weight="0.1227608" />
       <window_info id="Favorites" order="1" sideWeight="0.50569105" side_tool="true" weight="0.1227608" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49280575" visible="true" weight="0.23717949" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49280575" visible="true" weight="0.2457265" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32822758" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32822758" />
@@ -532,7 +537,8 @@
     <MESSAGE value="scrape.py: created shop_xpaths dictionary to store xpath strings in order to simplify get_name_price_currency and get_price functions. Finally resolved the problem of proper place of scrape module in project structure - moved it to separate folder on the same level as apps. scrape.py is now not executing when server starts, but executes properly when run separately as script thanks to if __name__ == &quot;__main__&quot;" />
     <MESSAGE value="Moved shop_xpaths dictionary to __init__.py of scrape_prices package. Figured out setting django environment is only needed for testing scrape.py outside of website." />
     <MESSAGE value="Reworked update_current_prices get_price and get_html_content to asynchronous versions with asyncio. Gained 8x performance in gathering data from the web." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reworked update_current_prices get_price and get_html_content to asynchronous versions with asyncio. Gained 8x performance in gathering data from the web." />
+    <MESSAGE value="Error handled situations where price or site may not be found. Created basic html template for err message and function in views that show it. Separated get_html_content function to async and normal version." />
+    <option name="LAST_COMMIT_MESSAGE" value="Error handled situations where price or site may not be found. Created basic html template for err message and function in views that show it. Separated get_html_content function to async and normal version." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -553,49 +559,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/users/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/users/templates/users/logout.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/Schafer/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2278">
-          <caret line="134" column="16" selection-start-line="134" selection-start-column="16" selection-end-line="134" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/users/templates/users/password_reset_confirm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/tables.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="216" column="16" selection-start-line="216" selection-start-column="16" selection-end-line="216" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Django Schafer Tutorial/Schafer/Schafer/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/price_detail.html" />
     <entry file="file://$PROJECT_DIR$/PriceMonitor/PriceMonitor/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -747,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/utils/timezone.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -804,23 +760,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/test.py" />
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/price_edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -845,16 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="50" column="36" lean-forward="true" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/error_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -862,9 +791,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/1966070151/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="5280" column="8" selection-start-line="5280" selection-start-column="8" selection-end-line="5280" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/core/mail/message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="429" column="10" lean-forward="true" selection-start-line="429" selection-start-column="10" selection-end-line="429" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/core/mail/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/users/templates/users/password_reset_subject.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/users/templates/users/password_reset_email.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2227">
+          <caret line="131" column="14" selection-start-line="131" selection-start-column="14" selection-end-line="131" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="68">
           <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -872,10 +852,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="124" column="99" selection-start-line="124" selection-start-column="99" selection-end-line="124" selection-end-column="99" />
+          <folding>
+            <element signature="e#232#310#0" />
+            <element signature="e#726#826#0" />
+            <element signature="e#860#1001#0" />
+            <element signature="e#1042#1568#0" />
+            <element signature="e#1626#1929#0" />
+            <element signature="e#2018#2168#0" />
+            <element signature="e#2291#2868#0" />
+            <element signature="e#2431#2676#0" />
+            <element signature="e#2514#2615#0" />
+            <element signature="e#2719#2868#0" />
+            <element signature="e#2870#2949#0" />
+            <element signature="e#3048#4003#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/puu.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="187">
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>

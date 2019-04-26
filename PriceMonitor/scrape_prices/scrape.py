@@ -122,12 +122,12 @@ def prepare_emails(prices_users_IDs):
 
     for id, user_id in prices_users_IDs:
         price = TrackedPrice.objects.get(id=id)
-        message = f"Cena {price.name} spadła do {price.current} {price.currency}!\n\n"
+        message = f"Cena {price.name} spadła do {price.current} {price.currency}!\n{price.url}\n\n"
 
         # Appends to previous message if it's the price belonging to the same user,
         # otherwise creates a new message
         if user_id != previous_user_id:
-            user = User.objects.get (id=user_id)
+            user = User.objects.get(id=user_id)
             message = f"{user.username},\n\n{message}"
             prepared_emails.append({'email': user.email,
                                     'subject': "Śledzone ceny spadły!",
@@ -145,14 +145,12 @@ def prepare_emails(prices_users_IDs):
 
 # TODO Secure password and mail
 def send_mails(prepared_emails):
-    email_from = settings.EMAIL_HOST_USER
-    password = settings.EMAIL_HOST_PASSWORD
     for message in prepared_emails:
         send_mail(message['subject'],
                   message['message'],
-                  message['email'],
-                  recipient_list=[email_from],
-                  auth_password=password)
+                  settings.EMAIL_HOST_USER,
+                  recipient_list=(message['email'],),
+                  auth_password=settings.EMAIL_HOST_PASSWORD)
 
 
 # updates prices and sends out emails if prices are now satisfactory for the user
