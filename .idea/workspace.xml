@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0295410-c6ce-4e4b-ad67-9c42eba44c28" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Price-Monitor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Price-Monitor.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" afterDir="false" />
     </list>
     <ignored path="PriceMonitor/venv/" />
     <ignored path="PriceMonitor/PriceMonitor/settings.py" />
@@ -54,30 +51,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="124" column="99" selection-start-line="124" selection-start-column="99" selection-end-line="124" selection-end-column="99" />
+            <state relative-caret-position="85">
+              <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
               <folding>
-                <element signature="e#232#310#0" />
-                <element signature="e#726#826#0" />
-                <element signature="e#860#1001#0" />
-                <element signature="e#1042#1568#0" />
-                <element signature="e#1626#1929#0" />
-                <element signature="e#2018#2168#0" />
-                <element signature="e#2291#2868#0" />
-                <element signature="e#2431#2676#0" />
-                <element signature="e#2514#2615#0" />
-                <element signature="e#2719#2868#0" />
-                <element signature="e#2870#2949#0" />
-                <element signature="e#3048#4003#0" />
+                <element signature="e#731#831#0" />
+                <element signature="e#913#1054#0" />
+                <element signature="e#1130#1656#0" />
+                <element signature="e#1812#2222#0" />
+                <element signature="e#2250#2400#0" />
+                <element signature="e#2544#3221#0" />
+                <element signature="e#3293#4401#0" />
+                <element signature="e#4450#5494#0" />
+                <element signature="e#5566#5833#0" />
+                <element signature="e#5913#6243#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -160,10 +155,10 @@
         <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/test.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/error_page.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py" />
-        <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/requirements.txt" />
         <option value="$PROJECT_DIR$/PriceMonitor/puu.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" />
       </list>
     </option>
   </component>
@@ -178,6 +173,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,17 +186,10 @@
               <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
               <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Price-Monitor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
-              <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,7 +197,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -418,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556047725502</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Sends email to site owner whenever user tries to add a shop not on the list. Corrected send_mails function. Moved venv inside project directory.">
+      <created>1556311313304</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1556311313304</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -436,7 +432,7 @@
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5071942" side_tool="true" weight="0.1227608" />
       <window_info id="Favorites" order="1" sideWeight="0.50569105" side_tool="true" weight="0.1227608" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49280575" visible="true" weight="0.2457265" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49280575" weight="0.2457265" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32822758" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32822758" />
@@ -538,7 +534,8 @@
     <MESSAGE value="Moved shop_xpaths dictionary to __init__.py of scrape_prices package. Figured out setting django environment is only needed for testing scrape.py outside of website." />
     <MESSAGE value="Reworked update_current_prices get_price and get_html_content to asynchronous versions with asyncio. Gained 8x performance in gathering data from the web." />
     <MESSAGE value="Error handled situations where price or site may not be found. Created basic html template for err message and function in views that show it. Separated get_html_content function to async and normal version." />
-    <option name="LAST_COMMIT_MESSAGE" value="Error handled situations where price or site may not be found. Created basic html template for err message and function in views that show it. Separated get_html_content function to async and normal version." />
+    <MESSAGE value="Sends email to site owner whenever user tries to add a shop not on the list. Corrected send_mails function. Moved venv inside project directory." />
+    <option name="LAST_COMMIT_MESSAGE" value="Sends email to site owner whenever user tries to add a shop not on the list. Corrected send_mails function. Moved venv inside project directory." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -547,6 +544,11 @@
           <url>file://$PROJECT_DIR$/PriceMonitor/manage.py</url>
           <line>1</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -825,6 +827,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/puu.py" />
     <entry file="file://$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2227">
@@ -852,36 +855,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="124" column="99" selection-start-line="124" selection-start-column="99" selection-end-line="124" selection-end-column="99" />
-          <folding>
-            <element signature="e#232#310#0" />
-            <element signature="e#726#826#0" />
-            <element signature="e#860#1001#0" />
-            <element signature="e#1042#1568#0" />
-            <element signature="e#1626#1929#0" />
-            <element signature="e#2018#2168#0" />
-            <element signature="e#2291#2868#0" />
-            <element signature="e#2431#2676#0" />
-            <element signature="e#2514#2615#0" />
-            <element signature="e#2719#2868#0" />
-            <element signature="e#2870#2949#0" />
-            <element signature="e#3048#4003#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/puu.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+          <folding>
+            <element signature="e#731#831#0" />
+            <element signature="e#913#1054#0" />
+            <element signature="e#1130#1656#0" />
+            <element signature="e#1812#2222#0" />
+            <element signature="e#2250#2400#0" />
+            <element signature="e#2544#3221#0" />
+            <element signature="e#3293#4401#0" />
+            <element signature="e#4450#5494#0" />
+            <element signature="e#5566#5833#0" />
+            <element signature="e#5913#6243#0" />
           </folding>
         </state>
       </provider>

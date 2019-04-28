@@ -1,3 +1,8 @@
+""" Module is used to get price and product data from urls provided by the
+    users, automatically update those prices in db and notify users via e-mail
+    when price drops met their expectations
+"""
+
 import os
 import sys
 import re
@@ -25,11 +30,13 @@ from scrape_prices import shop_xpaths
 
 
 async def get_html_content_async(url, session):
+    # Returns html content of url. Async ready.
     async with session.get(url) as pageContent:
         return html.fromstring(await pageContent.text())
 
 
 def get_html_content(url):
+    # Returns html content of url.
     try:
         return html.fromstring(requests.get(url).content)
     except requests.exceptions.RequestException:
@@ -37,6 +44,7 @@ def get_html_content(url):
 
 
 def get_name_price_currency(url):
+    # Returns name, price and currency from url, based on xpaths stored in dict initialized in init.py
     tree = get_html_content(url)
     shop = re.search(r'https?://(www\.)?(\w+\.\w+)', url).group(2)
 
@@ -54,24 +62,29 @@ def get_name_price_currency(url):
 
 
 async def get_price(url, session, scraped_prices):
+    """ Appends a tuple of price from url and url to list provided
+        in arguments, based on xpaths stored in dict initialized in init.py. Async ready
+    """
     tree = await get_html_content_async(url, session)
-    shop = re.search (r'https?://(www\.)?(\w+\.\w+)', url).group (2)
+    shop = re.search (r'https?://(www\.)?(\w+\.\w+)', url).group(2)
 
     price = tree.xpath(shop_xpaths[shop]['price'])[0]
     price = re.search(r'\d+[.,]*\d*', price).group()
     price = re.sub(r',', '.', price)
 
-    scraped_prices.append((url,price))
+    scraped_prices.append((url, price))
 
 
-# Returns query set of all necessary tracked price data
 def tracked_price_data():
+    # Returns query set of all necessary tracked price data
     return TrackedPrice.objects.values('id', 'user_id', 'when_inform', 'current',
                                        'desired', 'percent_drop', 'url')
 
 
-# Updates prices current value and last checked date but checks only unique urls
 async def update_current_prices():
+    """ Asynchronously searches for current prices in unique urls from database,
+        then updates prices current value and last checked date
+    """
     unique_urls = TrackedPrice.objects.values_list('url').distinct().order_by('url')
     async with aiohttp.ClientSession() as session:
         tasks = []
@@ -82,14 +95,13 @@ async def update_current_prices():
         await asyncio.gather(*tasks, return_exceptions=True)
 
     for price in scraped_prices:
-        TrackedPrice.objects\
-            .filter(url=price[0])\
-            .update(current=price[1],
-                     last_checked_date=timezone.now())
+        TrackedPrice.objects.filter(url=price[0]).update(current=price[1], last_checked_date=timezone.now())
 
-# Checks if prices dropped according to users wish and returns a list of tuples
-# with prices id's and users id's sorted by users id's
+
 def is_price_satisfactory(old_prices):
+    """ Checks if prices dropped according to users wishes and returns a list of tuples
+        with prices id's and users id's sorted by users id's
+    """
     id_list = []
     new_prices = TrackedPrice.objects.values("current")
 
@@ -114,9 +126,9 @@ def is_price_satisfactory(old_prices):
     return id_list
 
 
-# Returns list of dictionaries with email addresses and prepared messages
 def prepare_emails(prices_users_IDs):
-    i = -1
+    # Returns list of dictionaries with email addresses and prepared messages
+    email_index = -1
     prepared_emails = []
     previous_user_id = ""
 
@@ -132,10 +144,10 @@ def prepare_emails(prices_users_IDs):
             prepared_emails.append({'email': user.email,
                                     'subject': "Śledzone ceny spadły!",
                                     'message': message})
-            i += 1
+            email_index += 1
             previous_user_id = user_id
         else:
-            prepared_emails[i]['message'] += message
+            prepared_emails[email_index]['message'] += message
 
     for email in prepared_emails:
         email['message'] += 'Udanych zakupów, \nZespół Cebula Hunter'
@@ -143,7 +155,7 @@ def prepare_emails(prices_users_IDs):
     return prepared_emails
 
 
-# TODO Secure password and mail
+# TODO Secure password and mail with Heroku environ
 def send_mails(prepared_emails):
     for message in prepared_emails:
         send_mail(message['subject'],
@@ -153,8 +165,8 @@ def send_mails(prepared_emails):
                   auth_password=settings.EMAIL_HOST_PASSWORD)
 
 
-# updates prices and sends out emails if prices are now satisfactory for the user
 def price_drop_inform():
+    # Updates prices and sends out emails if prices are now satisfactory for the user
     old_prices = list(tracked_price_data())
     asyncio.run(update_current_prices())
     prices_users_IDs = is_price_satisfactory(old_prices)
@@ -166,6 +178,7 @@ def price_drop_inform():
 
 
 if __name__ == "__main__":
+    # Left here for testing purposes only
     start_time = time.time()
     asyncio.run(update_current_prices())
     duration = time.time() - start_time
