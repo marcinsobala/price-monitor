@@ -24,9 +24,8 @@ def sklepy(request):
     return render(request, 'tracked_prices/shops.html', {'shops': shops})
 
 
-def search_error(request, err_message):
-    return render(request, 'tracked_prices/error_page.html',
-                   {'error': err_message})
+def scrape_error(request, err_message):
+    return render(request, 'tracked_prices/error_page.html', {'error': err_message})
 
 
 @login_required
@@ -46,18 +45,16 @@ def price_new(request):
             try:
                 price.name, price.current, price.currency = get_name_price_currency(price.url)
             except ConnectionError:
-                return search_error(request, 'Ta strona nie istnieje')
-
+                return scrape_error(request, 'Ta strona nie istnieje')
             except KeyError:
                 send_mail('Nowy sklep do dodania',
                            f'Użytkownik nie znalazł ceny pod adresem {price.url}',
                            settings.EMAIL_HOST_USER,
                            recipient_list=(settings.EMAIL_HOST_USER,),
                            auth_password=settings.EMAIL_HOST_PASSWORD)
-                return search_error(request, 'Tego sklepu nie obsługujemy.')
-
+                return scrape_error(request, 'Tego sklepu nie obsługujemy.')
             except IndexError:
-                return search_error(request, 'Nie mogę znaleźć ceny na tej stronie :(')
+                return scrape_error(request, 'Nie mogę znaleźć ceny na tej stronie :(')
 
             price.user = request.user
             price.last_checked_date = timezone.now()

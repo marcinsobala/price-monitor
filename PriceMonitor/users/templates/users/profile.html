@@ -10,11 +10,11 @@
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom my-2">Profile Info</legend>
+                <legend class="border-bottom my-2">Profil użytkownika</legend>
                 {{ u_form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Update</button>
+                <button class="btn btn-outline-info" type="submit">Zapisz</button>
             </div>
         </form>
     </div>
