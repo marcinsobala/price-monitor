@@ -3,15 +3,14 @@
 {% block content %}
 <div class="row">
     <div class="col"></div>
-    <div class="col-sm-6">
+    <div class="col-xs-6">
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Zaloguj się</legend>
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Zaloguj</button>
+                <button class="btn btn-primary" type="submit">Zaloguj</button>
                 <small class="text-muted ml-2">
                     <a href="{% url 'password_reset' %}">Zapomniałeś hasła?</a>
                 </small>

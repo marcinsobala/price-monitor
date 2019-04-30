@@ -7,12 +7,11 @@
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Delete Post</legend>
-                <h2>Are you sure you want to delete the price "{{ object.name }}"?</h2>
+                <p class="mt-4">Czy na pewno nie chcesz już śledzić ceny "{{ object.name }}"?</p>
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-danger" type="submit">Yes, Delete</button>
-                <a class="btn btn-secondary" href="{% url 'tracked_prices_list' %}">Cancel</a>
+                <button class="btn btn-danger" type="submit">Tak, na pewno</button>
+                <a class="btn btn-secondary" href="{% url 'tracked_prices_list' %}">Anuluj</a>
             </div>
         </form>
     </div>
