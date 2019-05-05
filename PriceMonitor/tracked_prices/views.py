@@ -6,9 +6,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.conf import settings
 from django.core.mail import send_mail
+from django_tables2 import RequestConfig
 from scrape_prices.scrape import get_name_price_currency, price_drop_inform
 from .models import TrackedPrice, Shop
 from .forms import NewPriceForm, EditPriceForm
+from .tables import PriceTable
 
 def home(request):
     return render(request, 'tracked_prices/home.html')
@@ -32,7 +34,9 @@ def scrape_error(request, err_message):
 def tracked_prices_list(request):
     user = User.objects.get(username=request.user.username)
     prices = TrackedPrice.objects.filter(user=user).order_by('-last_checked_date')
-    return render(request, 'tracked_prices/tracked_prices_list.html', {'prices': prices})
+    table = PriceTable(prices)
+    RequestConfig(request, paginate={'per_page': 10}).configure(table)
+    return render(request, 'tracked_prices/tracked_prices_list.html', {'table': table})
 
 
 @login_required

@@ -1,27 +1,32 @@
 {% extends 'tracked_prices/base.html' %}
 
 {% block content %}
-<table class="table table-hover">
-  <thead>
+
+{% load render_table from django_tables2 %}
+
+{% render_table table %}
+
+<!--<table class="table table-hover">
+  <thead class="thead-light">
     <tr>
-      <th scope="col">Nazwa produktu</th>
-      <th scope="col">Wyślij powiadomienie</th>
-      <th scope="col">Obecna cena</th>
-      <th scope="col">Ostatnio sprawdzono</th>
-      <th scope="col">Edytuj</th>
-      <th scope="col">Usuń</th>
+      <th>Nazwa produktu</th>
+      <th>Wyślij powiadomienie</th>
+      <th>Obecna cena</th>
+      <th>Ostatnio sprawdzono</th>
+      <th>Edytuj</th>
+      <th>Usuń</th>
     </tr>
   </thead>
   <tbody>
 {% for price in prices %}
     <tr>
-      <td><a href ="{{price.url}}">{{price.name}}</a></td>
+      <td><a href="{{price.url}}">{{price.name}}</a></td>
       {% if price.when_inform == "A" %}
       <td>{{price.get_when_inform_display}}</td>
       {% elif price.when_inform == "B" %}
-      <td>Gdy cena spadnie o {{price.percent_drop}}%</td>
+      <td>gdy cena spadnie o {{price.percent_drop}}%</td>
       {% else %}
-      <td>Gdy cena spadnie do {{price.current}} {{price.currency}}</td>
+      <td>gdy cena spadnie do {{price.current}} {{price.currency}}</td>
       {% endif %}
       <td style="width: 10%">{{price.current}} {{price.currency}}</td>
       <td>{{ price.last_checked_date|date:"d.m.Y" }}</td>
@@ -38,5 +43,6 @@
     </tr>
 {% endfor %}
   </tbody>
-</table>
+</table>-->
+
 {% endblock %}
