@@ -6,7 +6,7 @@ class PriceTable(tables.Table):
 
     class Meta:
         model = TrackedPrice
-        template_name ='django_tables2/bootstrap.html'
+        template_name ='tracked_prices/table.html'
         fields = ('name', 'when_inform', 'current', 'last_checked_date')
         attrs = {'class': 'table table-hover table-responsive'}
 
