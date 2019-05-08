@@ -1,6 +1,6 @@
 """ Module is used to get price and product data from urls provided by the
     users, automatically update those prices in db and notify users via e-mail
-    when price drops met their expectations
+    when price drop met their expectations
 """
 
 import os
@@ -18,7 +18,7 @@ from django.utils import timezone
 from django.core.mail import send_mail
 
 # TODO remove before deployment. No need to set up environemnt when site is up
-# Following 3 lines enable module to use Django ORM  and app imports
+# Following 3 lines enable module to use Django ORM  and app imports when run outside of website
 # sys.path.append('..')
 # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.PriceMonitor.settings')
 # django.setup()
@@ -179,8 +179,11 @@ def price_drop_inform():
 
 if __name__ == "__main__":
     # Left here for testing purposes only
-    start_time = time.time()
-    asyncio.run(update_current_prices())
-    duration = time.time() - start_time
-    print(duration)
+    print(get_name_price_currency("https://www.jeans24h.pl/meskie-spodnie-cross-jeans-939-tapered-mid-blue-046-152-046-p-157728.html"))
+
+
+    # start_time = time.time()
+    # asyncio.run(update_current_prices())
+    # duration = time.time() - start_time
+    # print(duration)
     # print(get_name_price_currency('https://www.morele.net/karta-graficzna-gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-256-bit-3xhdmi-3xdp-usb-c-box-gv-n2070wf3-8gc-4142730/

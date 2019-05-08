@@ -49,7 +49,7 @@ def price_new(request):
             try:
                 price.name, price.current, price.currency = get_name_price_currency(price.url)
             except ConnectionError:
-                return scrape_error(request, 'Ta strona nie istnieje')
+                return scrape_error(request, 'Nie udało się połączyć ze stroną')
             except KeyError:
                 send_mail('Nowy sklep do dodania',
                            f'Użytkownik nie znalazł ceny pod adresem {price.url}',
@@ -58,7 +58,7 @@ def price_new(request):
                            auth_password=settings.EMAIL_HOST_PASSWORD)
                 return scrape_error(request, 'Tego sklepu nie obsługujemy.')
             except IndexError:
-                return scrape_error(request, 'Nie mogę znaleźć ceny na tej stronie :(')
+                return scrape_error(request, 'Nie mogę znaleźć ceny na tej stronie')
 
             price.user = request.user
             price.last_checked_date = timezone.now()
