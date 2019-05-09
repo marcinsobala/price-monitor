@@ -19,9 +19,9 @@ from django.core.mail import send_mail
 
 # TODO remove before deployment. No need to set up environemnt when site is up
 # Following 3 lines enable module to use Django ORM  and app imports when run outside of website
-# sys.path.append('..')
-# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.PriceMonitor.settings')
-# django.setup()
+sys.path.append('..')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.PriceMonitor.settings')
+django.setup()
 
 from django.conf import settings
 from django.contrib.auth.models import User
@@ -31,8 +31,11 @@ from scrape_prices import shop_xpaths
 
 async def get_html_content_async(url, session):
     # Returns html content of url. Async ready.
-    async with session.get(url) as pageContent:
-        return html.fromstring(await pageContent.text())
+    try:
+        async with session.get(url) as pageContent:
+            return html.fromstring(await pageContent.text())
+    except Exception as e:
+        return None
 
 
 def get_html_content(url):
@@ -66,9 +69,14 @@ async def get_price(url, session, scraped_prices):
         in arguments, based on xpaths stored in dict initialized in init.py. Async ready
     """
     tree = await get_html_content_async(url, session)
-    shop = re.search (r'https?://(www\.)?(\w+\.\w+)', url).group(2)
+    shop = re.search(r'https?://(www\.)?(\w+\.\w+)', url).group(2)
 
-    price = tree.xpath(shop_xpaths[shop]['price'])[0]
+    try:
+        price = tree.xpath(shop_xpaths[shop]['price'])[0]
+    except Exception as e:
+        TrackedPrice.objects.filter(url=url).update(name='# Produkt zniknął ze strony :/ Najlepiej go usunąć')
+        return None
+
     price = re.search(r'\d+[.,]*\d*', price).group()
     price = re.sub(r',', '.', price)
 
@@ -92,7 +100,7 @@ async def update_current_prices():
         for url in unique_urls:
             task = asyncio.create_task(get_price(url[0], session, scraped_prices))
             tasks.append(task)
-        await asyncio.gather(*tasks, return_exceptions=True)
+        await asyncio.gather(*tasks)
 
     for price in scraped_prices:
         TrackedPrice.objects.filter(url=price[0]).update(current=price[1], last_checked_date=timezone.now())
@@ -179,11 +187,9 @@ def price_drop_inform():
 
 if __name__ == "__main__":
     # Left here for testing purposes only
-    print(get_name_price_currency("https://www.jeans24h.pl/meskie-spodnie-cross-jeans-939-tapered-mid-blue-046-152-046-p-157728.html"))
 
-
-    # start_time = time.time()
-    # asyncio.run(update_current_prices())
-    # duration = time.time() - start_time
-    # print(duration)
+    start_time = time.time()
+    asyncio.run(update_current_prices())
+    duration = time.time() - start_time
+    print(duration)
     # print(get_name_price_currency('https://www.morele.net/karta-graficzna-gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-256-bit-3xhdmi-3xdp-usb-c-box-gv-n2070wf3-8gc-4142730/
