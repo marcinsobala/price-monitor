@@ -1,8 +1,16 @@
 {% extends 'tracked_prices/base.html' %}
+{% load static %}
 
 {% block content %}
-    <div class="col text-center">
-        <a class="btn btn-primary" href="{% url 'pufcia' %}">Pufcia is awesome!</a>
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-md-6 text-center">
+            <img src="{% static 'main.png' %}" height="300" width="300">
+            <br>
+            <a class="btn btn-primary" href="{% url 'pufcia' %}">Pufcia is awesome!</a>
+        </div>
+        <div class="col"></div>
     </div>
 
 {% endblock %}

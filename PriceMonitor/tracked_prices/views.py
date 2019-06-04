@@ -56,7 +56,7 @@ def price_new(request):
                            settings.EMAIL_HOST_USER,
                            recipient_list=(settings.EMAIL_HOST_USER,),
                            auth_password=settings.EMAIL_HOST_PASSWORD)
-                return scrape_error(request, 'Tego sklepu nie obsługujemy.')
+                return scrape_error(request, 'Tego sklepu nie obsługujemy')
             except IndexError:
                 return scrape_error(request, 'Nie mogę znaleźć ceny na tej stronie')
 

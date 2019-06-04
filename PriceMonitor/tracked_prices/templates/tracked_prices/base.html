@@ -11,20 +11,22 @@
     <link rel="stylesheet" href="{% static 'tracked_prices.css' %}">
 
 </head>
-<body onload="add_hide()" style="padding-top: 90px; padding-bottom: 40px;
-                                 background-image: url({% static 'linedpaper_@2x.png' %});">
+<body onload="add_hide()"  style="padding-top: 90px;
+                                  padding-bottom: 40px;
+                                  background-image: url({% static 'pinstripe.png' %});">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-success text-nowrap" style="font-size: 20px;">
-            <a class="navbar-brand" href="/" style="font-size: 26px">Cebula hunter</a>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top text-nowrap"
+             style="font-size: 18px;
+             background-color: #608850;">
+            <a class="navbar-brand" href="/" style="font-size: 26px">
+                <img src="{% static 'logo.png' %}" height="40" width="130">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Strona główna</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'shops' %}">Obsługiwane sklepy</a>
                     </li>
@@ -95,14 +97,14 @@
     </main>
 
 
-    <footer class="footer fixed-bottom mt-auto py-2 bg-light">
+    <footer class="footer fixed-bottom mt-auto py-2">
       <div class="container text-center">
         <span class="text-muted">&copy; 2019 Marcin Sobala</span>
         <span class="mx-5">
             <span class="text-muted pr-2">Kontakt:</span>
-            <a href="https://www.facebook.com/marcin.st.77" class="text-dark"><i class="fab fa-facebook-square px-1"></i></a>
-            <a href="" class="text-dark"><i class="fab fa-linkedin px-1"></i></a>
-            <span class="text-muted">marcin.sobala09@gmail.com</span>
+            <a href="https://www.facebook.com/marcin.st.77" class="text-light" style="background-color: #3B5998"><i class="fab fa-facebook-square px-1"></i></a>
+            <a href="" class="text-light" style="background-color: #0077B5"><i class="fab fa-linkedin px-1"></i></a>
+            <a href="mailto:marcin.sobala09@gmail.com" class="text-muted">marcin.sobala09@gmail.com</a>
 
         </span>
       </div>

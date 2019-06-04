@@ -40,9 +40,9 @@ class PriceTable(tables.Table):
     edit = tables.Column('Edytuj', linkify=('price_edit', (tables.A("id"), )), orderable=False, empty_values=())
 
     def render_edit(self):
-        return format_html("<i id = \"ihover\" class=\"fas fa-edit text-dark\"></i>")
+        return format_html("<i id = \"ihover\" class=\"fas fa-edit text-muted\"></i>")
 
     delete = tables.Column('Usuń', linkify=('price_remove', (tables.A("id"), )), orderable=False, empty_values=())
 
     def render_delete(self):
-        return format_html("<i id=\"ihover\" class=\"fas fa-trash-alt text-dark\"></i>")
+        return format_html("<i id=\"ihover\" class=\"fas fa-trash-alt text-danger\"></i>")
