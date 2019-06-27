@@ -8,7 +8,9 @@
             <br>
             {% for shop in shops %}
                 <h5 class="d-inline">
-                    <a href="{{ shop.name }}" class="badge badge-pill badge-info">{{ shop.name|slice:"7:" }}</a>
+                    <a href="{{ shop.url }}" class="badge badge-pill badge-info">
+                        {{ shop.name }}
+                    </a>
                 </h5>
             {% endfor %}
         </div>

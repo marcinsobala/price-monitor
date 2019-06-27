@@ -1,3 +1,5 @@
+import re
+
 from django.db import models
 from django.conf import settings
 from django.utils import timezone
@@ -35,9 +37,11 @@ class TrackedPrice(models.Model):
 
 
 class Shop(models.Model):
-    name = models.URLField(max_length=100)
+    url = models.URLField(max_length=100)
+    name = models.CharField(max_length=500)
 
     def __str__(self):
-        return self.name[7:]
+        return re.search(r'https?://(www\.)?(\w+\.\w+)', self.url).group(2)
+
 
 

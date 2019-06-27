@@ -188,8 +188,9 @@ def price_drop_inform():
 if __name__ == "__main__":
     # Left here for testing purposes only
 
-    start_time = time.time()
-    asyncio.run(update_current_prices())
-    duration = time.time() - start_time
-    print(duration)
+    # start_time = time.time()
+    # asyncio.run(update_current_prices())
+    # duration = time.time() - start_time
+    # print(duration)
     # print(get_name_price_currency('https://www.morele.net/karta-graficzna-gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-256-bit-3xhdmi-3xdp-usb-c-box-gv-n2070wf3-8gc-4142730/
+    print(get_name_price_currency('https://www.jeans24h.pl/damskie-spodnie-levis-724-high-waisted-straight-jeans-black-sheep-18883-0006-p-180649.html'))

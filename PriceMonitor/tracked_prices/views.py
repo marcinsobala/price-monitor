@@ -23,6 +23,8 @@ def pufcia(request):
 
 def sklepy(request):
     shops = Shop.objects.all().order_by('name')
+    for shop in shops:
+        shop.name = shop.__str__()
     return render(request, 'tracked_prices/shops.html', {'shops': shops})
 
 
