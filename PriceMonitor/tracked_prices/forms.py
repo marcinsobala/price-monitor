@@ -17,7 +17,6 @@ class NewPriceForm(forms.ModelForm):
         }
 
 
-
 class EditPriceForm(forms.ModelForm):
 
     class Meta:
