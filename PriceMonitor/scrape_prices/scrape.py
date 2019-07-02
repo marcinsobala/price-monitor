@@ -49,7 +49,7 @@ def get_html_content(url):
 def get_name_price_currency(url):
     # Returns name, price and currency from url, based on xpaths stored in dict initialized in init.py
     tree = get_html_content(url)
-    shop = re.search(r'https?://(www\.)?(\w+\.\w+)', url).group(2)
+    shop = re.search(r'https?://(www\.)?(\w+\.\w+\.*\w*)', url).group(2)
 
     name = tree.xpath(shop_xpaths[shop]['name'])[0]
     price = tree.xpath(shop_xpaths[shop]['price'])[0]
@@ -57,9 +57,11 @@ def get_name_price_currency(url):
 
     # Exceptions for websites which just can't store their metadata normally
     if shop == 'zalando.pl': currency = currency.split()[-1]
+    elif shop == 'olx.pl': currency = 'PLN'
 
-    price = re.search(r'\d+[.,]*\d*', price).group()
+    price = re.search(r'\d+ *[.,]*\d*', price).group()
     price = re.sub(r',', '.', price)
+    price = re.sub(r' ', '', price)
 
     return name, price, currency
 
@@ -77,7 +79,7 @@ async def get_price(url, session, scraped_prices):
         TrackedPrice.objects.filter(url=url).update(name='# Produkt zniknął ze strony :/ Najlepiej go usunąć')
         return None
 
-    price = re.search(r'\d+[.,]*\d*', price).group()
+    price = re.search(r'\d+ *[.,]*\d*', price).group()
     price = re.sub(r',', '.', price)
 
     scraped_prices.append((url, price))
@@ -193,4 +195,4 @@ if __name__ == "__main__":
     # duration = time.time() - start_time
     # print(duration)
     # print(get_name_price_currency('https://www.morele.net/karta-graficzna-gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-256-bit-3xhdmi-3xdp-usb-c-box-gv-n2070wf3-8gc-4142730/
-    print(get_name_price_currency('https://www.jeans24h.pl/damskie-spodnie-levis-724-high-waisted-straight-jeans-black-sheep-18883-0006-p-180649.html'))
+    print(get_name_price_currency('https://www.olx.pl/oferta/audi-a3-stan-wzorowy-CID5-IDAusIH.html#6256e9ac30;promoted'))
