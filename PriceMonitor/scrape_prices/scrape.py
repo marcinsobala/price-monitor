@@ -41,7 +41,7 @@ async def get_html_content_async(url, session):
 def get_html_content(url):
     # Returns html content of url.
     try:
-        return html.fromstring(requests.get(url).content)
+        return html.fromstring(requests.get(url).text)
     except requests.exceptions.RequestException:
         raise ConnectionError
 
@@ -49,15 +49,17 @@ def get_html_content(url):
 def get_name_price_currency(url):
     # Returns name, price and currency from url, based on xpaths stored in dict initialized in init.py
     tree = get_html_content(url)
-    shop = re.search(r'https?://(www\.)?(\w+\.\w+\.*\w*)', url).group(2)
+    shop = re.search(r'https?://(www\.)?(.*?)/', url).group(2)
 
-    name = tree.xpath(shop_xpaths[shop]['name'])[0]
-    price = tree.xpath(shop_xpaths[shop]['price'])[0]
-    currency = tree.xpath(shop_xpaths[shop]['currency'])[0]
+    name = tree.xpath(shop_xpaths[shop]['name'])[0].strip()
+    price = tree.xpath(shop_xpaths[shop]['price'])[0].strip()
+    currency = tree.xpath(shop_xpaths[shop]['currency'])[0].strip()
 
     # Exceptions for websites which just can't store their metadata normally
     if shop == 'zalando.pl': currency = currency.split()[-1]
     elif shop == 'olx.pl': currency = 'PLN'
+
+    if currency.strip().upper() == 'ZŁ': currency = 'PLN'
 
     price = re.search(r'\d+ *[.,]*\d*', price).group()
     price = re.sub(r',', '.', price)
@@ -195,4 +197,4 @@ if __name__ == "__main__":
     # duration = time.time() - start_time
     # print(duration)
     # print(get_name_price_currency('https://www.morele.net/karta-graficzna-gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-256-bit-3xhdmi-3xdp-usb-c-box-gv-n2070wf3-8gc-4142730/
-    print(get_name_price_currency('https://www.olx.pl/oferta/audi-a3-stan-wzorowy-CID5-IDAusIH.html#6256e9ac30;promoted'))
+    print(get_name_price_currency('https://www.apteka-melissa.pl/produkt/ibuprom-dla-dzieci-forte-200-mg5-ml-zawiesina-o-smaku-truskawkowym-100-ml,24846.html'))

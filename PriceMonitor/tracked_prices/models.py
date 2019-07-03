@@ -41,7 +41,7 @@ class Shop(models.Model):
     name = models.CharField(max_length=500)
 
     def __str__(self):
-        return re.search(r'https?://(www\.)?(\w+\.\w+\.*\w*)', self.url).group(2)
+        return re.search(r'https?://(www\.)?(.*?)/', self.url).group(2)
 
 
 
