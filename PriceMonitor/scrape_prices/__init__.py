@@ -1,4 +1,12 @@
-shop_xpaths = {'allegro.pl':
+shop_xpaths = {'123lazienka.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//span[@itemprop="price"]/text()',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'aleplanszowki.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//span[@itemprop="price"]/text()',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'allegro.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
@@ -14,6 +22,10 @@ shop_xpaths = {'allegro.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@property="product:price:amount"]/@content',
                     'currency': '//meta[@property="product:price:currency"]/@content'},
+               'feedo.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//div[@id="fly-cart"]/@data-currency'},
                'jeans24h.pl':
                    {'name': '//div[@class="headcorners"]/h1/text()',
                     'price': '//meta[@itemprop="price"]/@content',
@@ -33,4 +45,9 @@ shop_xpaths = {'allegro.pl':
                'zalando.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@name="twitter:data1"]/@content',
-                    'currency': '//meta[@name="twitter:data1"]/@content'}}
+                    'currency': '//meta[@name="twitter:data1"]/@content'},
+               'zooart.com.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//strong[@id="projector_price_value"]/text()',
+                    'currency': '//meta[@property="og:title"]/@content'}
+               }

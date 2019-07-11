@@ -56,8 +56,10 @@ def get_name_price_currency(url):
     currency = tree.xpath(shop_xpaths[shop]['currency'])[0].strip()
 
     # Exceptions for websites which just can't store their metadata normally
-    if shop == 'zalando.pl': currency = currency.split()[-1]
-    elif shop == 'olx.pl': currency = 'PLN'
+    if shop == 'zalando.pl':
+        currency = currency.split()[-1]
+    elif shop in ['olx.pl', 'zooart.com.pl']:
+        currency = 'PLN'
 
     if currency.strip().upper() == 'ZŁ': currency = 'PLN'
 
@@ -73,7 +75,7 @@ async def get_price(url, session, scraped_prices):
         in arguments, based on xpaths stored in dict initialized in init.py. Async ready
     """
     tree = await get_html_content_async(url, session)
-    shop = re.search(r'https?://(www\.)?(\w+\.\w+)', url).group(2)
+    shop = re.search(r'https?://(www\.)?(.*?)/', url).group(2)
 
     try:
         price = tree.xpath(shop_xpaths[shop]['price'])[0]
@@ -83,6 +85,7 @@ async def get_price(url, session, scraped_prices):
 
     price = re.search(r'\d+ *[.,]*\d*', price).group()
     price = re.sub(r',', '.', price)
+    price = re.sub(r' ', '', price)
 
     scraped_prices.append((url, price))
 
@@ -197,4 +200,5 @@ if __name__ == "__main__":
     # duration = time.time() - start_time
     # print(duration)
     # print(get_name_price_currency('https://www.morele.net/karta-graficzna-gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-256-bit-3xhdmi-3xdp-usb-c-box-gv-n2070wf3-8gc-4142730/
-    print(get_name_price_currency('https://www.apteka-melissa.pl/produkt/ibuprom-dla-dzieci-forte-200-mg5-ml-zawiesina-o-smaku-truskawkowym-100-ml,24846.html'))
+    print(get_name_price_currency('https://zooart.com.pl/product-pol-34846-Jane-Cat-mix-smakow-24x200g.html'))
+    asyncio.run(update_current_prices ())
