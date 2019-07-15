@@ -25,7 +25,7 @@ django.setup()
 
 from django.conf import settings
 from django.contrib.auth.models import User
-from tracked_prices.models import TrackedPrice
+from tracked_prices.models import TrackedPrice, Shop
 from scrape_prices import shop_xpaths
 
 
@@ -192,6 +192,21 @@ def price_drop_inform():
         send_mails(prepared_emails)
 
 
+def add_shops_from_dict_to_db():
+    shops_added = []
+    for shop in Shop.objects.all():
+        shops_added.append(shop.name)
+
+    shops_to_add = []
+    for shop in shop_xpaths.keys():
+        if shop not in shops_added:
+            shops_to_add.append(shop)
+
+    for shop in shops_to_add:
+        new_shop = Shop(name=shop, url=f"https://{shop}/")
+        new_shop.save()
+
+
 if __name__ == "__main__":
     # Left here for testing purposes only
 
@@ -200,5 +215,7 @@ if __name__ == "__main__":
     # duration = time.time() - start_time
     # print(duration)
     # print(get_name_price_currency('https://www.morele.net/karta-graficzna-gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-256-bit-3xhdmi-3xdp-usb-c-box-gv-n2070wf3-8gc-4142730/
-    print(get_name_price_currency('https://zooart.com.pl/product-pol-34846-Jane-Cat-mix-smakow-24x200g.html'))
-    asyncio.run(update_current_prices ())
+    # print(get_name_price_currency('https://www.sfd.pl/sklep/ALLNUTRITION_Whey_Protein-opis33284.html'))
+    add_shops_from_dict_to_db()
+
+
