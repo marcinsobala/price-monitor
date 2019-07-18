@@ -10,6 +10,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'aptekagemini.pl':
+                   {'name': '//h1[@itemprop="name"]/text()',
+                    'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'apteka-melissa.pl':
                    {'name': '//h1[@class="roboto h1-karta-produktu"]/text()',
                     'price': '//h2[contains(@class, "roboto cena_pro")]//text()[2]',
@@ -18,14 +22,30 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="currency"]/@content'},
+               'brw.pl':
+                   {'name': '//h1[@property="name"]/text()',
+                    'price': '//div[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'ceneo.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@property="product:price:amount"]/@content',
                     'currency': '//meta[@property="product:price:currency"]/@content'},
+               'congee.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'decathlon.pl':
                    {'name': '//span[@id="productName"]/text()',
                     'price': '//meta[@property="og:description"]/@content',
                     'currency': '//span[@class="currency minus spacing"]/text()'},
+               'dragonus.pl':
+                   {'name': '//meta[@name="og:title"]/@content',
+                    'price': '//div[@class="price"]/em/text()',
+                    'currency': '//div[@class="currency none"]/text()'},
+               'edugaleria.pl':
+                   {'name': '//h1[@class="tytulB2C"]/span/text()',
+                    'price': '//meta[@name="description"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'eobuwie.com.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@property="product:price:amount"]/@content',
@@ -38,6 +58,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//div[@id="fly-cart"]/@data-currency'},
+               'fera.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//meta[@property="product:price:amount"]/@content',
+                    'currency': '//meta[@property="product:price:currency"]/@content'},
                'gmoto.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@name="Description"]/@content',
@@ -50,6 +74,14 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//div[@class="headcorners"]/h1/text()',
                     'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="currency"]/@content'},
+               'krakvet.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//strong[@id="projector_price_value"]/text()',
+                    'currency': '//strong[@id="projector_price_value"]/text()'},
+               'kucmar.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'morele.net':
                    {'name': '//*[@itemtype="http://schema.org/AggregateRating"]/div/span[@itemprop="name"]/text()',
                     'price': '//div[@itemprop="price"]/@content',
@@ -62,10 +94,30 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//strong[@class="xxxx-large not-arranged"]/text()',
                     'currency': '//meta[@property="og:title"]/@content'},
+               'pieknowdomu.pl':
+                   {'name': '//h1[@class="product-main-header"]/text()',
+                    'price': '//div[@itemprop="offers"]/descendant::span[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'sfd.pl':
                    {'name': '//h1[@itemprop="name"]/text()[2]',
                     'price': '//span[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'swiatksiazki.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//meta[@property="product:price:amount"]/@content',
+                    'currency': '//meta[@property="product:price:currency"]/@content'},
+               'taniaksiazka.pl':
+                   {'name': '//meta[@itemprop="name"]/@content',
+                    'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'wapteka.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'x-kom.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//meta[@property="product:price:amount"]/@content',
+                    'currency': '//meta[@property="product:price:currency"]/@content'},
                'zalando.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@name="twitter:data1"]/@content',
