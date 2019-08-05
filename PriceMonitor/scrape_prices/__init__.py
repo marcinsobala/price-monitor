@@ -2,6 +2,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//span[@itemprop="price"]/text()',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'agdmaster.com':
+                   {'name': '//div[@id="product-description"]/div/h1/text()',
+                    'price': '//p[@class="lead price selling"]/text()',
+                    'currency': '//div[@id="product-description"]/div/h1/text()'},
                'aleplanszowki.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//span[@itemprop="price"]/text()',
@@ -18,6 +22,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//h1[@class="roboto h1-karta-produktu"]/text()',
                     'price': '//h2[contains(@class, "roboto cena_pro")]//text()[2]',
                     'currency': '//span[@itemprop="priceCurrency"]/text()'},
+               'bezokularow.pl':
+                   {'name': '//h1[@itemprop="name"]/text()',
+                    'price': '//span[@id="yp"]/text()',
+                    'currency': '//span[@id="yp"]/span/text()'},
                'bonito.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@itemprop="price"]/@content',
@@ -38,6 +46,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//span[@id="productName"]/text()',
                     'price': '//meta[@property="og:description"]/@content',
                     'currency': '//span[@class="currency minus spacing"]/text()'},
+               'diabetyk24.pl':
+                   {'name': '//h1[@class="product-title"]/text()',
+                    'price': '//span[@class="product-price-current"]/strong/text()',
+                    'currency': '//h1[@class="product-title"]/text()'},
                'dragonus.pl':
                    {'name': '//meta[@name="og:title"]/@content',
                     'price': '//div[@class="price"]/em/text()',
@@ -82,6 +94,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'manada.pl':
+                   {'name': '//span[@itemprop="name"]/text()',
+                    'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="currency"]/@content'},
                'morele.net':
                    {'name': '//*[@itemtype="http://schema.org/AggregateRating"]/div/span[@itemprop="name"]/text()',
                     'price': '//div[@itemprop="price"]/@content',
@@ -113,6 +129,10 @@ shop_xpaths = {'123lazienka.pl':
                'wapteka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'wittchen.com':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//span[@itemprop="price"]/text()',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'x-kom.pl':
                    {'name': '//meta[@property="og:title"]/@content',

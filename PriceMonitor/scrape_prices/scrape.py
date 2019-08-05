@@ -58,7 +58,7 @@ def get_name_price_currency(url):
     # Exceptions for websites which just can't store their metadata normally
     if shop == 'zalando.pl':
         currency = currency.split()[-1]
-    elif shop in ['krakvet.pl', 'olx.pl', 'zooart.com.pl']:
+    elif shop in ['agdmaster.com', 'diabetyk24.pl', 'krakvet.pl', 'olx.pl', 'zooart.com.pl']:
         currency = 'PLN'
 
     if currency.strip().upper() == 'ZŁ': currency = 'PLN'
@@ -216,7 +216,6 @@ if __name__ == "__main__":
     # asyncio.run(update_current_prices())
     # duration = time.time() - start_time
     # print(duration)
-    # print(get_name_price_currency('https://www.morele.net/karta-graficzna-gigabyte-geforce-rtx-2070-windforce-8g-8gb-gddr6-256-bit-3xhdmi-3xdp-usb-c-box-gv-n2070wf3-8gc-4142730/
     # print(get_name_price_currency('https://www.123lazienka.pl/pl/p/DEANTE-MODERN-ZLEWOZMYWAK-1%2C5-KOMOROWY-Z-OCIEKACZEM-ALABASTER-GRANIT-100-x-52-cm-ZQM-A513/20553'))
     add_shops_from_dict_to_db()
 

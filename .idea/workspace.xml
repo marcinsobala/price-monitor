@@ -22,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="119" column="42" selection-start-line="119" selection-start-column="42" selection-end-line="119" selection-end-column="42" />
+            <state relative-caret-position="187">
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -31,11 +31,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="103" column="50" lean-forward="true" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
+            <state relative-caret-position="494">
+              <caret line="219" column="31" lean-forward="true" selection-start-line="219" selection-start-column="31" selection-end-line="219" selection-end-column="31" />
               <folding>
                 <element signature="e#202#211#0" expanded="true" />
-                <element signature="e#3959#5071#0" />
               </folding>
             </state>
           </provider>
@@ -474,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563216118556</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added new shops: ['aptekagemini.pl', 'brw.pl', 'congee.pl', 'dragonus.pl', 'edugaleria.pl', 'fera.pl', 'krakvet.pl', 'kucmar.pl', 'pieknowdomu.pl', 'swiatksiazki.pl', 'taniaksiazka.pl', 'wapteka.pl', 'x-kom.pl']">
+      <created>1563475047960</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1563475047960</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -496,12 +502,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32822758" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32713348" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49893162" visible="true" weight="0.39059082" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49893162" weight="0.39059082" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32822758" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32822758" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49947312" weight="0.22428884" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49947312" visible="true" weight="0.22428884" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50106835" side_tool="true" weight="0.39715537" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32713348" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -609,7 +615,8 @@
     <MESSAGE value="Added north.pl and apteka-melissa.pl. Had to modify shop from url regex a little." />
     <MESSAGE value="Added feedo.pl, zooart.com.pl, aleplanszowki.pl and 123lazienka.pl." />
     <MESSAGE value="Added new shops: 'bonito.pl', 'decathlon.pl', 'etuo.pl', 'gmoto.pl', 'gunfire.com', 'sfd.pl', 'zegarek.net'. Created a function in scrape.py that adds shops from shop_xpaths to db if they aren't already there." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new shops: 'bonito.pl', 'decathlon.pl', 'etuo.pl', 'gmoto.pl', 'gunfire.com', 'sfd.pl', 'zegarek.net'. Created a function in scrape.py that adds shops from shop_xpaths to db if they aren't already there." />
+    <MESSAGE value="Added new shops: ['aptekagemini.pl', 'brw.pl', 'congee.pl', 'dragonus.pl', 'edugaleria.pl', 'fera.pl', 'krakvet.pl', 'kucmar.pl', 'pieknowdomu.pl', 'swiatksiazki.pl', 'taniaksiazka.pl', 'wapteka.pl', 'x-kom.pl']" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new shops: ['aptekagemini.pl', 'brw.pl', 'congee.pl', 'dragonus.pl', 'edugaleria.pl', 'fera.pl', 'krakvet.pl', 'kucmar.pl', 'pieknowdomu.pl', 'swiatksiazki.pl', 'taniaksiazka.pl', 'wapteka.pl', 'x-kom.pl']" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -618,11 +625,6 @@
           <url>file://$PROJECT_DIR$/PriceMonitor/manage.py</url>
           <line>1</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py</url>
-          <line>213</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py</url>
@@ -994,34 +996,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="309" selection-start-line="309" selection-end-line="309" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="119" column="42" selection-start-line="119" selection-start-column="42" selection-end-line="119" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1046,13 +1024,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="103" column="50" lean-forward="true" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
+        <state relative-caret-position="494">
+          <caret line="219" column="31" lean-forward="true" selection-start-line="219" selection-start-column="31" selection-end-line="219" selection-end-column="31" />
           <folding>
             <element signature="e#202#211#0" expanded="true" />
-            <element signature="e#3959#5071#0" />
           </folding>
         </state>
       </provider>
