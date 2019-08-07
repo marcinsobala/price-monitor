@@ -19,20 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+            <state relative-caret-position="372">
+              <caret line="159" column="42" selection-start-line="159" selection-start-column="42" selection-end-line="159" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="219" column="31" lean-forward="true" selection-start-line="219" selection-start-column="31" selection-end-line="219" selection-end-column="31" />
+            <state relative-caret-position="272">
+              <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
               <folding>
                 <element signature="e#202#211#0" expanded="true" />
               </folding>
@@ -136,8 +136,8 @@
         <option value="$PROJECT_DIR$/PriceMonitor/users/forms.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/users/templates/users/login.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py" />
-        <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py" />
       </list>
     </option>
   </component>
@@ -480,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563475047960</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added new shops: 'agdmaster.com', 'bezokularow.pl', 'diabetyk24.pl', 'manada.pl', 'wittchen.com'">
+      <created>1565032060920</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1565032060920</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -616,7 +623,8 @@
     <MESSAGE value="Added feedo.pl, zooart.com.pl, aleplanszowki.pl and 123lazienka.pl." />
     <MESSAGE value="Added new shops: 'bonito.pl', 'decathlon.pl', 'etuo.pl', 'gmoto.pl', 'gunfire.com', 'sfd.pl', 'zegarek.net'. Created a function in scrape.py that adds shops from shop_xpaths to db if they aren't already there." />
     <MESSAGE value="Added new shops: ['aptekagemini.pl', 'brw.pl', 'congee.pl', 'dragonus.pl', 'edugaleria.pl', 'fera.pl', 'krakvet.pl', 'kucmar.pl', 'pieknowdomu.pl', 'swiatksiazki.pl', 'taniaksiazka.pl', 'wapteka.pl', 'x-kom.pl']" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new shops: ['aptekagemini.pl', 'brw.pl', 'congee.pl', 'dragonus.pl', 'edugaleria.pl', 'fera.pl', 'krakvet.pl', 'kucmar.pl', 'pieknowdomu.pl', 'swiatksiazki.pl', 'taniaksiazka.pl', 'wapteka.pl', 'x-kom.pl']" />
+    <MESSAGE value="Added new shops: 'agdmaster.com', 'bezokularow.pl', 'diabetyk24.pl', 'manada.pl', 'wittchen.com'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new shops: 'agdmaster.com', 'bezokularow.pl', 'diabetyk24.pl', 'manada.pl', 'wittchen.com'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -625,11 +633,6 @@
           <url>file://$PROJECT_DIR$/PriceMonitor/manage.py</url>
           <line>1</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py</url>
-          <line>36</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -1041,20 +1044,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="219" column="31" lean-forward="true" selection-start-line="219" selection-start-column="31" selection-end-line="219" selection-end-column="31" />
+        <state relative-caret-position="272">
+          <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
           <folding>
             <element signature="e#202#211#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="159" column="42" selection-start-line="159" selection-start-column="42" selection-end-line="159" selection-end-column="42" />
         </state>
       </provider>
     </entry>

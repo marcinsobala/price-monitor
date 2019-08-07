@@ -2,6 +2,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//span[@itemprop="price"]/text()',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               '3xk.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//strong[@id="projector_price_value"]/text()',
+                    'currency': '//meta[@property="og:title"]/@content'},
                'agdmaster.com':
                    {'name': '//div[@id="product-description"]/div/h1/text()',
                     'price': '//p[@class="lead price selling"]/text()',
@@ -98,6 +102,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//span[@itemprop="name"]/text()',
                     'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="currency"]/@content'},
+               'manito.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//strong[@id="projector_price_value"]/text()',
+                    'currency': '//span[@class="menu_settings_currency"]/text()'},
                'morele.net':
                    {'name': '//*[@itemtype="http://schema.org/AggregateRating"]/div/span[@itemprop="name"]/text()',
                     'price': '//div[@itemprop="price"]/@content',
@@ -114,6 +122,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//h1[@class="product-main-header"]/text()',
                     'price': '//div[@itemprop="offers"]/descendant::span[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'porcelana24.pl':
+                   {'name': '//h1[@itemprop="name"]/text()',
+                    'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'sfd.pl':
                    {'name': '//h1[@itemprop="name"]/text()[2]',
                     'price': '//span[@itemprop="price"]/@content',
@@ -126,10 +138,18 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@itemprop="name"]/@content',
                     'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'telekarma.pl':
+                   {'name': '//div[@id="productCard"]/h1/text()',
+                    'price': '//span[@class="productCardPrice-price"]/text()',
+                    'currency': '//div[@id="productCard"]/h1/text()'},
                'wapteka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'wideshop.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//strong[@id="projector_price_value"]/text()',
+                    'currency': '//span[@class="menu_settings_currency"]/text()'},
                'wittchen.com':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//span[@itemprop="price"]/text()',
@@ -149,5 +169,9 @@ shop_xpaths = {'123lazienka.pl':
                'zooart.com.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//strong[@id="projector_price_value"]/text()',
-                    'currency': '//meta[@property="og:title"]/@content'}
+                    'currency': '//meta[@property="og:title"]/@content'},
+               'zooplus.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'}
                }

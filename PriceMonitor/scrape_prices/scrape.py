@@ -58,7 +58,10 @@ def get_name_price_currency(url):
     # Exceptions for websites which just can't store their metadata normally
     if shop == 'zalando.pl':
         currency = currency.split()[-1]
-    elif shop in ['agdmaster.com', 'diabetyk24.pl', 'krakvet.pl', 'olx.pl', 'zooart.com.pl']:
+    elif shop in ['3xk.pl', 'agdmaster.com',
+                  'diabetyk24.pl', 'krakvet.pl',
+                  'olx.pl', 'telekarma.pl',
+                  'zooart.com.pl']:
         currency = 'PLN'
 
     if currency.strip().upper() == 'ZŁ': currency = 'PLN'
@@ -218,5 +221,5 @@ if __name__ == "__main__":
     # print(duration)
     # print(get_name_price_currency('https://www.123lazienka.pl/pl/p/DEANTE-MODERN-ZLEWOZMYWAK-1%2C5-KOMOROWY-Z-OCIEKACZEM-ALABASTER-GRANIT-100-x-52-cm-ZQM-A513/20553'))
     add_shops_from_dict_to_db()
-
+    print(len(shop_xpaths))
 
