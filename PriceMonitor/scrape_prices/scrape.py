@@ -59,7 +59,7 @@ def get_name_price_currency(url):
     if shop == 'zalando.pl':
         currency = currency.split()[-1]
     elif shop in ['3xk.pl', 'agdmaster.com',
-                  'diabetyk24.pl', 'krakvet.pl',
+                  'diabetyk24.pl', 'gryplanszowe.pl', 'krakvet.pl',
                   'olx.pl', 'telekarma.pl',
                   'zooart.com.pl']:
         currency = 'PLN'

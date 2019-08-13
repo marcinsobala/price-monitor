@@ -22,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="159" column="42" selection-start-line="159" selection-start-column="42" selection-end-line="159" selection-end-column="42" />
+            <state relative-caret-position="255">
+              <caret line="75" column="56" selection-start-line="75" selection-start-column="56" selection-end-line="75" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+            <state relative-caret-position="270">
+              <caret line="61" column="67" lean-forward="true" selection-start-line="61" selection-start-column="67" selection-end-line="61" selection-end-column="67" />
               <folding>
                 <element signature="e#202#211#0" expanded="true" />
               </folding>
@@ -487,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565032060920</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Added new shops: ['3xk.pl', 'manito.pl', 'porcelana24.pl', 'telekarma.pl', 'wideshop.pl', 'zooplus.pl']">
+      <created>1565204242863</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1565204242863</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -599,7 +606,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/PriceMonitor" />
     </ignored-roots>
-    <MESSAGE value="1. New price view now gets all price data in one request, as before. 2. Simplified xpath selectors for names and prices 3. Created functions that scrape current prices for urls and updates them in database." />
     <MESSAGE value="Used Q query to add condition to query that scraped price must be different from database price in order to update it in db" />
     <MESSAGE value="Removed Q query, because even if price is no different, last_checked_date has to be updated. Merged scraped_prices function into update_prices function as a generator. Prepared a function that returns a list of ids for prices that dropped in a way satisfying for the user." />
     <MESSAGE value="is_price_satisfactory function now returns sorted list of tuples with price and user id. Created prepare_emails function that prepares max 1 message per user but with all desired price changes that happened." />
@@ -624,7 +630,8 @@
     <MESSAGE value="Added new shops: 'bonito.pl', 'decathlon.pl', 'etuo.pl', 'gmoto.pl', 'gunfire.com', 'sfd.pl', 'zegarek.net'. Created a function in scrape.py that adds shops from shop_xpaths to db if they aren't already there." />
     <MESSAGE value="Added new shops: ['aptekagemini.pl', 'brw.pl', 'congee.pl', 'dragonus.pl', 'edugaleria.pl', 'fera.pl', 'krakvet.pl', 'kucmar.pl', 'pieknowdomu.pl', 'swiatksiazki.pl', 'taniaksiazka.pl', 'wapteka.pl', 'x-kom.pl']" />
     <MESSAGE value="Added new shops: 'agdmaster.com', 'bezokularow.pl', 'diabetyk24.pl', 'manada.pl', 'wittchen.com'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new shops: 'agdmaster.com', 'bezokularow.pl', 'diabetyk24.pl', 'manada.pl', 'wittchen.com'" />
+    <MESSAGE value="Added new shops: ['3xk.pl', 'manito.pl', 'porcelana24.pl', 'telekarma.pl', 'wideshop.pl', 'zooplus.pl']" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new shops: ['3xk.pl', 'manito.pl', 'porcelana24.pl', 'telekarma.pl', 'wideshop.pl', 'zooplus.pl']" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1046,8 +1053,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        <state relative-caret-position="270">
+          <caret line="61" column="67" lean-forward="true" selection-start-line="61" selection-start-column="67" selection-end-line="61" selection-end-column="67" />
           <folding>
             <element signature="e#202#211#0" expanded="true" />
           </folding>
@@ -1056,8 +1063,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="159" column="42" selection-start-line="159" selection-start-column="42" selection-end-line="159" selection-end-column="42" />
+        <state relative-caret-position="255">
+          <caret line="75" column="56" selection-start-line="75" selection-start-column="56" selection-end-line="75" selection-end-column="56" />
         </state>
       </provider>
     </entry>

@@ -18,6 +18,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'am76.pl':
+                   {'name': '//meta[@itemprop="name"]/@content',
+                    'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'aptekagemini.pl':
                    {'name': '//h1[@itemprop="name"]/text()',
                     'price': '//meta[@itemprop="price"]/@content',
@@ -26,6 +30,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//h1[@class="roboto h1-karta-produktu"]/text()',
                     'price': '//h2[contains(@class, "roboto cena_pro")]//text()[2]',
                     'currency': '//span[@itemprop="priceCurrency"]/text()'},
+               'aros.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="currency"]/@content'},
                'bezokularow.pl':
                    {'name': '//h1[@itemprop="name"]/text()',
                     'price': '//span[@id="yp"]/text()',
@@ -62,6 +70,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//h1[@class="tytulB2C"]/span/text()',
                     'price': '//meta[@name="description"]/@content',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'empik.com':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//span[@itemprop="price"]/@content',
+                    'currency': '//span[@itemprop="priceCurrency"]/@content'},
                'eobuwie.com.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@property="product:price:amount"]/@content',
@@ -82,6 +94,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@name="Description"]/@content',
                     'currency': '//span[@itemprop="priceCurrency"]/text()'},
+               'gryplanszowe.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//strong[@id="projector_price_value"]/text()',
+                    'currency': '//strong[@id="projector_price_value"]/text()'},
                'gunfire.com':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//span[@id="projector_price_srp"]/text()',
