@@ -54,6 +54,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'cqb.pl':
+                   {'name': '//meta[@name="Description"]/@content',
+                    'price': '//div[@id="cena_produktu"]/span[1]/text()',
+                    'currency': '//meta[@name="Description"]/@content'},
                'decathlon.pl':
                    {'name': '//span[@id="productName"]/text()',
                     'price': '//meta[@property="og:description"]/@content',
@@ -126,6 +130,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//*[@itemtype="http://schema.org/AggregateRating"]/div/span[@itemprop="name"]/text()',
                     'price': '//div[@itemprop="price"]/@content',
                     'currency': '//div[@ itemprop="priceCurrency"]/@content'},
+               'nestof.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//strong[@id="projector_price_value"]/text()',
+                    'currency': '//meta[@property="og:title"]/@content'},
                'north.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@property="og:price:amount"]/@content',
