@@ -6,6 +6,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//strong[@id="projector_price_value"]/text()',
                     'currency': '//meta[@property="og:title"]/@content'},
+               '4kom.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//strong[@id="projector_price_value"]/text()',
+                    'currency': '//meta[@property="og:title"]/@content'},
                'agdmaster.com':
                    {'name': '//div[@id="product-description"]/div/h1/text()',
                     'price': '//p[@class="lead price selling"]/text()',
@@ -34,10 +38,18 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="currency"]/@content'},
+               'astratex.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//meta[@property="product:price:amount"]/@content',
+                    'currency': '//meta[@property="og:title"]/@content'},
                'bezokularow.pl':
                    {'name': '//h1[@itemprop="name"]/text()',
                     'price': '//span[@id="yp"]/text()',
                     'currency': '//span[@id="yp"]/span/text()'},
+               'bestphone.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//strong[@id="projector_price_value"]/text()',
+                    'currency': '//meta[@property="og:title"]/@content'},
                'bonito.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@itemprop="price"]/@content',
@@ -58,6 +70,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@name="Description"]/@content',
                     'price': '//div[@id="cena_produktu"]/span[1]/text()',
                     'currency': '//meta[@name="Description"]/@content'},
+               'crazytime.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//strong[@id="projector_price_value"]/text()',
+                    'currency': '//meta[@property="og:title"]/@content'},
                'decathlon.pl':
                    {'name': '//span[@id="productName"]/text()',
                     'price': '//meta[@property="og:description"]/@content',
@@ -70,6 +86,14 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@name="og:title"]/@content',
                     'price': '//div[@class="price"]/em/text()',
                     'currency': '//div[@class="currency none"]/text()'},
+               'e-glamour.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//span[@itemprop="price"]/@content',
+                    'currency': '//span[@itemprop="priceCurrency"]/@content'},
+               'ebay.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//span[@itemprop="price"]/@content',
+                    'currency': '//span[@itemprop="priceCurrency"]/@content'},
                'edugaleria.pl':
                    {'name': '//h1[@class="tytulB2C"]/span/text()',
                     'price': '//meta[@name="description"]/@content',
@@ -98,6 +122,14 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@name="Description"]/@content',
                     'currency': '//span[@itemprop="priceCurrency"]/text()'},
+               'goodlookin.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//strong[@id="projector_price_value"]/text()',
+                    'currency': '//meta[@property="og:title"]/@content'},
+               'grene.pl':
+                   {'name': '//div[@class="description"]/h1/text()',
+                    'price': '//span[@class="price"]/text()',
+                    'currency': '//span[@class="price"]/text()'},
                'gryplanszowe.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//strong[@id="projector_price_value"]/text()',
@@ -110,6 +142,10 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//div[@class="headcorners"]/h1/text()',
                     'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="currency"]/@content'},
+               'karkosik.pl':
+                   {'name': '//meta[@property="og:title"]/@content',
+                    'price': '//span[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'krakvet.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//strong[@id="projector_price_value"]/text()',
@@ -138,13 +174,25 @@ shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//meta[@property="og:price:amount"]/@content',
                     'currency': '//meta[@property="og:price:currency"]/@content'},
+               'notino.pl':
+                   {'name': '//meta[@name="keywords"]/@content',
+                    'price': '//span[@itemprop="price"]/@content',
+                    'currency': '//span[@itemprop="priceCurrency"]/@content'},
                'olx.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//strong[@class="xxxx-large not-arranged"]/text()',
                     'currency': '//meta[@property="og:title"]/@content'},
+               'outdoorzy.pl':
+                   {'name': '//meta[@name="keywords"]/@content',
+                    'price': '//meta[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'pieknowdomu.pl':
                    {'name': '//h1[@class="product-main-header"]/text()',
                     'price': '//div[@itemprop="offers"]/descendant::span[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'podstadionem.pl':
+                   {'name': '//h1[@itemprop="name"]/text()',
+                    'price': '//span[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'porcelana24.pl':
                    {'name': '//h1[@itemprop="name"]/text()',
@@ -153,6 +201,10 @@ shop_xpaths = {'123lazienka.pl':
                'sfd.pl':
                    {'name': '//h1[@itemprop="name"]/text()[2]',
                     'price': '//span[@itemprop="price"]/@content',
+                    'currency': '//meta[@itemprop="priceCurrency"]/@content'},
+               'strefakierowcy.pl':
+                   {'name': '//h1[@itemprop="name"]/text()',
+                    'price': '//meta[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'swiatksiazki.pl':
                    {'name': '//meta[@property="og:title"]/@content',

@@ -19,23 +19,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="135" column="73" lean-forward="true" selection-start-line="135" selection-start-column="73" selection-end-line="135" selection-end-column="73" />
+            <state relative-caret-position="306">
+              <caret line="27" column="78" lean-forward="true" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="225" column="31" lean-forward="true" selection-start-line="225" selection-start-column="31" selection-end-line="225" selection-end-column="31" />
+              <folding>
+                <element signature="e#202#211#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/re.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="61" column="27" lean-forward="true" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
-              <folding>
-                <element signature="e#202#211#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="177">
+              <caret line="182" selection-start-line="182" selection-end-line="182" />
             </state>
           </provider>
         </entry>
@@ -136,14 +145,14 @@
         <option value="$PROJECT_DIR$/PriceMonitor/users/forms.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/users/templates/users/login.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py" />
-        <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py" />
+        <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="955" />
-    <option name="width" value="972" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -501,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565722911449</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Added new shops: ['cqb.pl', 'nestof.pl']">
+      <created>1567450435614</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1567450435614</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -514,7 +530,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="955" y="0" width="972" height="1047" extended-state="0" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5071942" side_tool="true" weight="0.1227608" />
@@ -523,12 +539,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32822758" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32713348" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49893162" weight="0.39059082" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49893162" visible="true" weight="0.39059082" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32822758" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32822758" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49947312" visible="true" weight="0.22428884" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49947312" weight="0.22428884" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50106835" side_tool="true" weight="0.39715537" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32713348" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -613,7 +629,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/PriceMonitor" />
     </ignored-roots>
-    <MESSAGE value="Removed Q query, because even if price is no different, last_checked_date has to be updated. Merged scraped_prices function into update_prices function as a generator. Prepared a function that returns a list of ids for prices that dropped in a way satisfying for the user." />
     <MESSAGE value="is_price_satisfactory function now returns sorted list of tuples with price and user id. Created prepare_emails function that prepares max 1 message per user but with all desired price changes that happened." />
     <MESSAGE value="scrape.py: created shop_xpaths dictionary to store xpath strings in order to simplify get_name_price_currency and get_price functions. Finally resolved the problem of proper place of scrape module in project structure - moved it to separate folder on the same level as apps. scrape.py is now not executing when server starts, but executes properly when run separately as script thanks to if __name__ == &quot;__main__&quot;" />
     <MESSAGE value="Moved shop_xpaths dictionary to __init__.py of scrape_prices package. Figured out setting django environment is only needed for testing scrape.py outside of website." />
@@ -638,7 +653,8 @@
     <MESSAGE value="Added new shops: 'agdmaster.com', 'bezokularow.pl', 'diabetyk24.pl', 'manada.pl', 'wittchen.com'" />
     <MESSAGE value="Added new shops: ['3xk.pl', 'manito.pl', 'porcelana24.pl', 'telekarma.pl', 'wideshop.pl', 'zooplus.pl']" />
     <MESSAGE value="Added new shops: ['am76.pl', 'aros.pl', 'empik.com', 'gryplanszowe.pl']" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new shops: ['am76.pl', 'aros.pl', 'empik.com', 'gryplanszowe.pl']" />
+    <MESSAGE value="Added new shops: ['cqb.pl', 'nestof.pl']" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new shops: ['cqb.pl', 'nestof.pl']" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -647,6 +663,11 @@
           <url>file://$PROJECT_DIR$/PriceMonitor/manage.py</url>
           <line>1</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py</url>
+          <line>224</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -661,60 +682,53 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>shops_to_add</expression-string>
+        <expression-string>tree.xpath('//div[@id=&quot;a-page&quot;]')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>print(shops_to_add)</expression-string>
+        <expression-string>tree.xpath('//div/span')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>shops_to_add[]</expression-string>
+        <expression-string>tree.xpath('//div')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>tree.xpath('//h1[@class=&quot;roboto h1-karta-produktu&quot;]/text()')</expression-string>
+        <expression-string>tree.xpath('//div)')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>tree.xpath('//h2[contains(@class, &quot;roboto cena_pro&quot;)]//text()[2]//h1[@class=&quot;roboto h1-karta-produktu&quot;]/text()')</expression-string>
+        <expression-string>tree.xpath('//div/span)')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>tree.xpath('//h2[contains(@class, &quot;roboto cena_pro&quot;)]//text()[2]')</expression-string>
+        <expression-string>tree.xpath('//div/span/text()')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>tree.xpath('//h2[contains(@class, &quot;roboto cena_pro&quot;)]//text()[3]')</expression-string>
+        <expression-string>tree.xpath('//div/span[2]/text()')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>tree.xpath('//h2[contains(@class, &quot;roboto cena_pro&quot;)]//text()')</expression-string>
+        <expression-string>tree.xpath('//div/span[1]/text()')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>tree.xpath('//h2[contains(@class, &quot;roboto cena_pro&quot;)]/node()[3]')[0]</expression-string>
+        <expression-string>tree.xpath('div')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/db/models/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="692" selection-start-line="692" selection-end-line="692" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/test.py" />
     <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/1966070151/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1013,13 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="309" selection-start-line="309" selection-end-line="309" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/asyncio/base_events.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -1058,20 +1065,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="61" column="27" lean-forward="true" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
-          <folding>
-            <element signature="e#202#211#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="182" selection-start-line="182" selection-end-line="182" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="135" column="73" lean-forward="true" selection-start-line="135" selection-start-column="73" selection-end-line="135" selection-end-column="73" />
+        <state relative-caret-position="306">
+          <caret line="27" column="78" lean-forward="true" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="225" column="31" lean-forward="true" selection-start-line="225" selection-start-column="31" selection-end-line="225" selection-end-column="31" />
+          <folding>
+            <element signature="e#202#211#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

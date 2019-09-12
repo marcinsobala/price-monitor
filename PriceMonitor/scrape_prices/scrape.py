@@ -58,9 +58,11 @@ def get_name_price_currency(url):
     # Exceptions for websites which just can't store their metadata normally
     if shop == 'zalando.pl':
         currency = currency.split()[-1]
-    elif shop in ['3xk.pl', 'agdmaster.com',
-                  'cqb.pl',
-                  'diabetyk24.pl', 'gryplanszowe.pl', 'krakvet.pl',
+    elif shop in ['3xk.pl', '4kom.pl',
+                  'agdmaster.com', 'astratex.pl', 'bestphone.pl',
+                  'cqb.pl', 'crazytime.pl', 'diabetyk24.pl',
+                  'goodlookin.pl', 'gryplanszowe.pl', 'grene.pl',
+                  'krakvet.pl',
                   'nestof.pl', 'olx.pl', 'telekarma.pl',
                   'zooart.com.pl']:
         currency = 'PLN'
@@ -220,7 +222,7 @@ if __name__ == "__main__":
     # asyncio.run(update_current_prices())
     # duration = time.time() - start_time
     # print(duration)
-    # print(get_name_price_currency('https://www.123lazienka.pl/pl/p/DEANTE-MODERN-ZLEWOZMYWAK-1%2C5-KOMOROWY-Z-OCIEKACZEM-ALABASTER-GRANIT-100-x-52-cm-ZQM-A513/20553'))
+    # print(get_name_price_currency('https://www.amazon.com/Oculus-Quest-All-Gaming-System-PC/dp/B07HNW68ZC/ref=lp_16225016011_1_1?s=videogames-intl-ship&ie=UTF8&qid=1568309936&sr=1-1&th=1'))
     add_shops_from_dict_to_db()
     print(len(shop_xpaths))
 
