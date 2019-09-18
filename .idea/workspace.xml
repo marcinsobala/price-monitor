@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b0295410-c6ce-4e4b-ad67-9c42eba44c28" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/tracked_prices/tables.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/shops.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/shops.html" afterDir="false" />
     </list>
     <ignored path="PriceMonitor/venv/" />
     <ignored path="PriceMonitor/PriceMonitor/settings.py" />
@@ -20,34 +20,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="78" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="226" column="27" selection-start-line="226" selection-start-column="27" selection-end-line="226" selection-end-column="27" />
-              <folding>
-                <element signature="e#202#211#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="22" column="40" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="40" />
+            <state relative-caret-position="253">
+              <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#span#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#1;n#span#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -56,11 +37,23 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/tables.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="545">
+              <caret line="57" column="43" lean-forward="true" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/static/tracked_prices.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="25" />
+            <state relative-caret-position="289">
+              <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -145,7 +138,6 @@
         <option value="$PROJECT_DIR$/PriceMonitor/PriceMonitor/settings.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/error_page.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/home.html" />
-        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/tables.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/table.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/users/views.py" />
@@ -157,14 +149,16 @@
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" />
-        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/shops.html" />
+        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html" />
+        <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/tables.py" />
         <option value="$PROJECT_DIR$/PriceMonitor/tracked_prices/static/tracked_prices.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+    <option name="x" value="940" />
+    <option name="y" value="11" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -206,14 +200,6 @@
               <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
               <item name="tracked_prices" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Price-Monitor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Price-Monitor" type="462c0819:PsiDirectoryNode" />
-              <item name="PriceMonitor" type="462c0819:PsiDirectoryNode" />
-              <item name="tracked_prices" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="tracked_prices" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -583,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568310797304</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Styled shop buttons in CSS to look amazing with transitions and everything :)">
+      <created>1568750283425</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1568750283425</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -596,7 +589,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="940" y="11" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5071942" side_tool="true" weight="0.1227608" />
@@ -695,7 +688,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/PriceMonitor" />
     </ignored-roots>
-    <MESSAGE value="scrape.py: created shop_xpaths dictionary to store xpath strings in order to simplify get_name_price_currency and get_price functions. Finally resolved the problem of proper place of scrape module in project structure - moved it to separate folder on the same level as apps. scrape.py is now not executing when server starts, but executes properly when run separately as script thanks to if __name__ == &quot;__main__&quot;" />
     <MESSAGE value="Moved shop_xpaths dictionary to __init__.py of scrape_prices package. Figured out setting django environment is only needed for testing scrape.py outside of website." />
     <MESSAGE value="Reworked update_current_prices get_price and get_html_content to asynchronous versions with asyncio. Gained 8x performance in gathering data from the web." />
     <MESSAGE value="Error handled situations where price or site may not be found. Created basic html template for err message and function in views that show it. Separated get_html_content function to async and normal version." />
@@ -720,7 +712,8 @@
     <MESSAGE value="Added new shops: ['am76.pl', 'aros.pl', 'empik.com', 'gryplanszowe.pl']" />
     <MESSAGE value="Added new shops: ['cqb.pl', 'nestof.pl']" />
     <MESSAGE value="Added new shops: ['4kom.pl', 'astratex.pl', 'bestphone.pl', 'crazytime.pl', 'e-glamour.pl', 'ebay.pl', 'goodlookin.pl', 'grene.pl', 'karkosik.pl', 'notino.pl', 'outdoorzy.pl', 'podstadionem.pl', 'strefakierowcy.pl']" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new shops: ['4kom.pl', 'astratex.pl', 'bestphone.pl', 'crazytime.pl', 'e-glamour.pl', 'ebay.pl', 'goodlookin.pl', 'grene.pl', 'karkosik.pl', 'notino.pl', 'outdoorzy.pl', 'podstadionem.pl', 'strefakierowcy.pl']" />
+    <MESSAGE value="Styled shop buttons in CSS to look amazing with transitions and everything :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Styled shop buttons in CSS to look amazing with transitions and everything :)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -938,23 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="76" column="48" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/tables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="42" column="77" selection-start-line="42" selection-start-column="77" selection-end-line="42" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1086,13 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="78" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/re.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -1117,12 +1086,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="78" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
+        <state relative-caret-position="627">
           <caret line="226" column="27" selection-start-line="226" selection-start-column="27" selection-end-line="226" selection-end-column="27" />
           <folding>
             <element signature="e#202#211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#span#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1134,31 +1140,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/home.html">
+    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/tables.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="40" />
+        <state relative-caret-position="545">
+          <caret line="57" column="43" lean-forward="true" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#span#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PriceMonitor/tracked_prices/static/tracked_prices.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="25" />
+        <state relative-caret-position="289">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
         </state>
       </provider>
     </entry>
