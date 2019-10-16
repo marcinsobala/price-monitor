@@ -5,8 +5,37 @@
 
     <div class="row">
         <div class="col"></div>
-        <div class="col-md-6 text-center">
-            <img src="{% static 'main.png' %}" height="300" width="300">
+        <div class="col-md-9 text-center">
+            <h3 class="text-dark my-4">Jak oszczędzać z cebulą?</h3>
+            <div>
+                <img src="{% static 'main.png' %}" height="300" width="300" class="d-inline-block">
+                <span class="d-inline-block align-middle">
+                    <ol class="text-left">
+                        <li class="mb-2">
+                            {% if user.is_authenticated %}
+                                 Zaloguj się , a jeśli jeszcze nie masz konta - załóż je!
+                            {% else %}
+                                <a href="{% url 'login' %}">Zaloguj się</a>
+                                , a jeśli jeszcze nie masz konta -
+                                <a href ="{% url 'register' %}">załóż je!</a>
+                            {% endif %}
+                        </li>
+                        <li class="mb-2">Znajdź w sieci upragniony przedmiot.</li>
+                        <li class="mb-2">
+                            {% if user.is_authenticated %}
+                                <a href="{% url 'price_new' %}">Podaj</a>
+                            {% else %}
+                                Podaj
+                            {% endif %}
+                                 stronie link do zakupu.</li>
+                        <li class="mb-2">Śpij spokojnie i pozwól Cebuli czuwać. <br>
+                        Gdy cena spadnie, otrzymasz maila.</li>
+                        <li class="mb-2"><b>Profit!</b></li>
+                    </ol>
+                </span>
+
+            </div>
+
             <br>
             <a class="btn btn-primary" href="{% url 'pufcia' %}">Pufcia is awesome!</a>
         </div>
