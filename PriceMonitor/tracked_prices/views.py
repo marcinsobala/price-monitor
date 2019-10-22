@@ -7,10 +7,12 @@ from django.contrib.auth.models import User
 from django.conf import settings
 from django.core.mail import send_mail
 from django_tables2 import RequestConfig
+
 from scrape_prices.scrape import get_name_price_currency, price_drop_inform
 from .models import TrackedPrice, Shop
 from .forms import NewPriceForm, EditPriceForm
 from .tables import PriceTable
+
 
 def home(request):
     return render(request, 'tracked_prices/home.html')
@@ -54,10 +56,10 @@ def price_new(request):
                 return scrape_error(request, 'Nie udało się połączyć ze stroną')
             except KeyError:
                 send_mail('Nowy sklep do dodania',
-                           f'Użytkownik nie znalazł ceny pod adresem {price.url}',
-                           settings.EMAIL_HOST_USER,
-                           recipient_list=(settings.EMAIL_HOST_USER,),
-                           auth_password=settings.EMAIL_HOST_PASSWORD)
+                          f'Użytkownik nie znalazł ceny pod adresem {price.url}',
+                          settings.EMAIL_HOST_USER,
+                          recipient_list=(settings.EMAIL_HOST_USER,),
+                          auth_password=settings.EMAIL_HOST_PASSWORD)
                 return scrape_error(request, 'Tego sklepu nie obsługujemy')
             except IndexError:
                 return scrape_error(request, 'Nie mogę znaleźć ceny na tej stronie')
@@ -98,4 +100,3 @@ class PriceDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def get_success_url(self):
         return '/prices/'
-

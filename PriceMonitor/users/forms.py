@@ -34,6 +34,3 @@ class CustomAuthenticationForm(AuthenticationForm):
             HTML("""<small class="text-muted ml-2">
                         <a href="{% url 'password_reset' %}">Zapomniałeś hasła?</a>
                     </small>"""))
-
-
-

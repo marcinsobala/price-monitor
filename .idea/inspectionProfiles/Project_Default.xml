@@ -1,10 +1,12 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
-    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="false" level="WARNING" enabled_by_default="false">
       <option name="ignoredIdentifiers">
         <list>
           <option value="PriceMonitor.tracked_prices.models.TrackedPrice.objects" />
+          <option value="PriceMonitor.scrape_prices.scrape.tracked_prices" />
+          <option value="PriceMonitor.scrape_prices.scrape.scrape_prices" />
         </list>
       </option>
     </inspection_tool>

@@ -17,7 +17,7 @@ import django
 from django.utils import timezone
 from django.core.mail import send_mail
 
-# TODO remove before deployment. No need to set up environemnt when site is up
+# TODO remove before deployment. No need to set up environment when site is up
 # Following 3 lines enable module to use Django ORM  and app imports when run outside of website
 sys.path.append('..')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.PriceMonitor.settings')
@@ -25,6 +25,7 @@ django.setup()
 
 from django.conf import settings
 from django.contrib.auth.models import User
+
 from tracked_prices.models import TrackedPrice, Shop
 from scrape_prices import shop_xpaths
 
@@ -67,7 +68,8 @@ def get_name_price_currency(url):
                   'zooart.com.pl']:
         currency = 'PLN'
 
-    if currency.strip().upper() == 'ZŁ': currency = 'PLN'
+    if currency.strip().upper() == 'ZŁ':
+        currency = 'PLN'
 
     price = re.search(r'\d+ *[.,]*\d*', price).group()
     price = re.sub(r',', '.', price)
@@ -147,14 +149,14 @@ def is_price_satisfactory(old_prices):
     return id_list
 
 
-def prepare_emails(prices_users_IDs):
+def prepare_emails(prices_users_ids):
     # Returns list of dictionaries with email addresses and prepared messages
     email_index = -1
     prepared_emails = []
     previous_user_id = ""
 
-    for id, user_id in prices_users_IDs:
-        price = TrackedPrice.objects.get(id=id)
+    for id_price, user_id in prices_users_ids:
+        price = TrackedPrice.objects.get(id=id_price)
         message = f"Cena {price.name} spadła do {price.current} {price.currency}!\n{price.url}\n\n"
 
         # Appends to previous message if it's the price belonging to the same user,
@@ -190,11 +192,11 @@ def price_drop_inform():
     # Updates prices and sends out emails if prices are now satisfactory for the user
     old_prices = list(tracked_price_data())
     asyncio.run(update_current_prices())
-    prices_users_IDs = is_price_satisfactory(old_prices)
+    prices_users_ids = is_price_satisfactory(old_prices)
 
     # No point in running these functions if no prices are satisfactory
-    if prices_users_IDs:
-        prepared_emails = prepare_emails(prices_users_IDs)
+    if prices_users_ids:
+        prepared_emails = prepare_emails(prices_users_ids)
         send_mails(prepared_emails)
 
 
@@ -223,6 +225,9 @@ if __name__ == "__main__":
     # duration = time.time() - start_time
     # print(duration)
     # print(get_name_price_currency('https://www.amazon.com/Oculus-Quest-All-Gaming-System-PC/dp/B07HNW68ZC/ref=lp_16225016011_1_1?s=videogames-intl-ship&ie=UTF8&qid=1568309936&sr=1-1&th=1'))
-    add_shops_from_dict_to_db()
-    print(len(shop_xpaths))
+    # add_shops_from_dict_to_db()
+    # print(len(shop_xpaths))
+
+    import pandas as pd
+    import numpy as np
 
