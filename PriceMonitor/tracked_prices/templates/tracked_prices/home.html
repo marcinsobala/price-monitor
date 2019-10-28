@@ -11,15 +11,13 @@
                 <img src="{% static 'main.png' %}" height="300" width="300" class="d-inline-block">
                 <span class="d-inline-block align-middle">
                     <ol class="text-left">
+                        {% if not user.is_authenticated %}
                         <li class="mb-2">
-                            {% if user.is_authenticated %}
-                                 Zaloguj się , a jeśli jeszcze nie masz konta - załóż je!
-                            {% else %}
-                                <a href="{% url 'login' %}">Zaloguj się</a>
-                                , a jeśli jeszcze nie masz konta -
-                                <a href ="{% url 'register' %}">załóż je!</a>
-                            {% endif %}
+                            <a href="{% url 'login' %}">Zaloguj się</a>
+                            , a jeśli jeszcze nie masz konta -
+                            <a href ="{% url 'register' %}">załóż je!</a>
                         </li>
+                        {% endif %}
                         <li class="mb-2">Znajdź w sieci upragniony przedmiot.</li>
                         <li class="mb-2">
                             {% if user.is_authenticated %}
@@ -28,8 +26,10 @@
                                 Podaj
                             {% endif %}
                                  stronie link do zakupu.</li>
-                        <li class="mb-2">Śpij spokojnie i pozwól Cebuli czuwać. <br>
-                        Gdy cena spadnie, otrzymasz maila.</li>
+                        <li class="mb-2">
+                            Śpij spokojnie i pozwól Cebuli czuwać. <br>
+                            Gdy cena spadnie, otrzymasz maila!
+                        </li>
                         <li class="mb-2"><b>Profit!</b></li>
                     </ol>
                 </span>

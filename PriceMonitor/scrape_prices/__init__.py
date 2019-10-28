@@ -1,3 +1,5 @@
+"""Contains dictionary with xpaths for data from every shop serviced by the website."""
+
 shop_xpaths = {'123lazienka.pl':
                    {'name': '//meta[@property="og:title"]/@content',
                     'price': '//span[@itemprop="price"]/text()',
@@ -68,7 +70,7 @@ shop_xpaths = {'123lazienka.pl':
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'cqb.pl':
                    {'name': '//meta[@name="Description"]/@content',
-                    'price': '//div[@id="cena_produktu"]/span[1]/text()',
+                    'price': '//div[@id="cena_produktu"]/span[2]/text()',
                     'currency': '//meta[@name="Description"]/@content'},
                'crazytime.pl':
                    {'name': '//meta[@property="og:title"]/@content',
@@ -163,7 +165,8 @@ shop_xpaths = {'123lazienka.pl':
                     'price': '//strong[@id="projector_price_value"]/text()',
                     'currency': '//span[@class="menu_settings_currency"]/text()'},
                'morele.net':
-                   {'name': '//*[@itemtype="http://schema.org/AggregateRating"]/div/span[@itemprop="name"]/text()',
+                   {'name': '//*[@itemtype="http://schema.org/AggregateRating"]'
+                            + '/div/span[@itemprop="name"]/text()',
                     'price': '//div[@itemprop="price"]/@content',
                     'currency': '//div[@ itemprop="priceCurrency"]/@content'},
                'nestof.pl':
@@ -188,7 +191,8 @@ shop_xpaths = {'123lazienka.pl':
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'pieknowdomu.pl':
                    {'name': '//h1[@class="product-main-header"]/text()',
-                    'price': '//div[@itemprop="offers"]/descendant::span[@itemprop="price"]/@content',
+                    'price': '//div[@itemprop="offers"]/descendant::span'
+                             + '[@itemprop="price"]/@content',
                     'currency': '//meta[@itemprop="priceCurrency"]/@content'},
                'podstadionem.pl':
                    {'name': '//h1[@itemprop="name"]/text()',
