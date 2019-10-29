@@ -1,11 +1,15 @@
 from django import forms
+
 from .models import TrackedPrice
 
-class NewPriceForm(forms.ModelForm):
 
+class NewPriceForm(forms.ModelForm):
     class Meta:
         model = TrackedPrice
-        fields = ('url', 'when_inform', 'percent_drop', 'desired')
+        fields = ('url',
+                  'when_inform',
+                  'percent_drop',
+                  'desired')
         widgets = {
             'url': forms.URLInput(attrs={'placeholder': 'https://'})
         }
@@ -18,10 +22,12 @@ class NewPriceForm(forms.ModelForm):
 
 
 class EditPriceForm(forms.ModelForm):
-
     class Meta:
         model = TrackedPrice
-        fields = ('name', 'when_inform', 'percent_drop', 'desired')
+        fields = ('name',
+                  'when_inform',
+                  'percent_drop',
+                  'desired')
         labels = {
             'name': 'Nazwa produktu',
             'when_inform': 'Wyślij powiadomienie',

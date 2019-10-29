@@ -8,14 +8,18 @@ class PriceTable(tables.Table):
     class Meta:
         model = TrackedPrice
         template_name = 'tracked_prices/table.html'
-        fields = ('name', 'when_inform', 'current', 'last_checked_date')
+        fields = ('name',
+                  'when_inform',
+                  'current',
+                  'last_checked_date')
         attrs = {'class': 'table table-hover table-responsive'}
 
     name = tables.Column("Nazwa", attrs={'th': {'class': "col_header"}})
 
     @staticmethod
     def render_name(record):
-        return format_html(f"<a href=\"{record.url}\" class=\"price_name\">{record.name}</a>")
+        return format_html(
+            f"<a href=\"{record.url}\" class=\"price_name\">{record.name}</a>")
 
     when_inform = tables.Column("Wyślij powiadomienie",
                                 attrs={'td': {'style': 'width: 17%'},

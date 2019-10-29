@@ -1,9 +1,9 @@
 import re
 
-from django.db import models
 from django.conf import settings
-from django.utils import timezone
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.db import models
+from django.utils import timezone
 
 
 class TrackedPrice(models.Model):
@@ -42,6 +42,3 @@ class Shop(models.Model):
 
     def __str__(self):
         return re.search(r'https?://(www\.)?(.*?)/', self.url).group(2)
-
-
-

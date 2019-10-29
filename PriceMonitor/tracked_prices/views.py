@@ -15,15 +15,18 @@ from .tables import PriceTable
 
 
 def home(request):
+    """Renders home page."""
     return render(request, 'tracked_prices/home.html')
 
 
 def pufcia(request):
+    """Test method for testing scrape.price_drop_inform"""
     price_drop_inform()
     return render(request, 'tracked_prices/pufcia.html')
 
 
 def sklepy(request):
+    """Renders the page with all shops list."""
     shops = Shop.objects.all().order_by('name')
     for shop in shops:
         shop.name = shop.__str__()
@@ -31,11 +34,16 @@ def sklepy(request):
 
 
 def scrape_error(request, err_message):
+    """Renders error page when price can't be found in provided url
+
+    :param err_message: an error message to be shown to user
+    """
     return render(request, 'tracked_prices/error_page.html', {'error': err_message})
 
 
 @login_required
 def tracked_prices_list(request):
+    """Renders the site with table that shows all prices tracked by the user."""
     user = User.objects.get(username=request.user.username)
     prices = TrackedPrice.objects.filter(user=user).order_by('-last_checked_date')
     table = PriceTable(prices)
@@ -45,21 +53,22 @@ def tracked_prices_list(request):
 
 @login_required
 def price_new(request):
+    """Renders the form for tracking new prices."""
     if request.method == "POST":
         form = NewPriceForm(request.POST)
         if form.is_valid():
             price = form.save(commit=False)
 
             try:
-                price.name, price.current, price.currency = get_name_price_currency(price.url)
+                price.name, price.current, price.currency = get_name_price_currency(
+                    price.url)
             except ConnectionError:
                 return scrape_error(request, 'Nie udało się połączyć ze stroną')
             except KeyError:
                 send_mail('Nowy sklep do dodania',
                           f'Użytkownik nie znalazł ceny pod adresem {price.url}',
                           settings.EMAIL_HOST_USER,
-                          recipient_list=(settings.EMAIL_HOST_USER,),
-                          auth_password=settings.EMAIL_HOST_PASSWORD)
+                          recipient_list=(settings.EMAIL_HOST_USER,), )
                 return scrape_error(request, 'Tego sklepu nie obsługujemy')
             except IndexError:
                 return scrape_error(request, 'Nie mogę znaleźć ceny na tej stronie')
@@ -76,6 +85,10 @@ def price_new(request):
 
 @login_required
 def price_edit(request, pk):
+    """Renders price edit form view.
+
+    :param pk: primary key of a tracked price
+    """
     price = get_object_or_404(TrackedPrice, pk=pk)
     if request.method == "POST":
         form = EditPriceForm(request.POST, instance=price)
@@ -90,6 +103,7 @@ def price_edit(request, pk):
 
 
 class PriceDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """Renders the price delete view."""
     model = TrackedPrice
 
     def test_func(self):

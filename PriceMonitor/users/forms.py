@@ -1,8 +1,8 @@
-from django import forms
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Submit, Row, HTML
+from crispy_forms.layout import Layout, Submit, HTML
+from django import forms
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.models import User
 
 
 class UserRegisterForm(UserCreationForm):
@@ -10,7 +10,10 @@ class UserRegisterForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'password2']
+        fields = ['username',
+                  'email',
+                  'password1',
+                  'password2']
 
 
 class UserUpdateForm(forms.ModelForm):
@@ -18,10 +21,13 @@ class UserUpdateForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['username', 'email']
+        fields = ['username',
+                  'email']
 
 
-class CustomAuthenticationForm(AuthenticationForm):
+class CustomLoginForm(AuthenticationForm):
+    """Had to subclass it because of some ugly form stretching."""
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()

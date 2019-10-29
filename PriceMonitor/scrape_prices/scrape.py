@@ -226,8 +226,7 @@ def send_mails(prepared_emails):
         send_mail(message['subject'],
                   message['message'],
                   settings.EMAIL_HOST_USER,
-                  recipient_list=(message['email'],),
-                  auth_password=settings.EMAIL_HOST_PASSWORD)
+                  recipient_list=(message['email'],),)
 
 
 def price_drop_inform():
