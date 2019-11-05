@@ -123,7 +123,7 @@ async def get_price(url, session, scraped_prices):
     scraped_prices.append((url, price))
 
 
-def tracked_price_data():
+def get_tracked_price_data():
     """Returns a query set of all necessary tracked price data.
 
     :return: a query set with all necessary tracked price data
@@ -231,7 +231,7 @@ def send_mails(prepared_emails):
 
 def price_drop_inform():
     """Updates prices and sends out emails if prices are now satisfactory for the user."""
-    old_prices = list(tracked_price_data())
+    old_prices = list(get_tracked_price_data())
     asyncio.run(update_current_prices())
     prices_users_ids = is_price_satisfactory(old_prices)
 
