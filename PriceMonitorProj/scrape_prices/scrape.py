@@ -21,7 +21,7 @@ from lxml import html
 # Following 3 lines enable module to use Django ORM
 # and app imports when run outside of website
 sys.path.append('..')
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.PriceMonitor.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PriceMonitor.settings')
 django.setup()
 
 from django.conf import settings

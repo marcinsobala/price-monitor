@@ -2,18 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0295410-c6ce-4e4b-ad67-9c42eba44c28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PriceMonitor/tests/tests_scrape_prices/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PriceMonitor/tests/tests_scrape_prices/test_get_tracked_price_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PriceMonitor/tests/tests_tracked_prices/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PriceMonitor/tests/tests_tracked_prices/test_tracked_price_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PriceMonitor/tests/tests_users/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PriceMonitorProj/users/migrations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Price-Monitor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Price-Monitor.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/marci.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/marci.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PriceMonitor/PriceMonitor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/tests/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/PriceMonitor/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/PriceMonitor/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/PriceMonitor/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/PriceMonitor/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/scrape_prices/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/scrape_prices/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/scrape_prices/scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/scrape_prices/scrape.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tests/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tests/tests_scrape_prices/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tests/tests_scrape_prices/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tests/tests_scrape_prices/test_get_tracked_price_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tests/tests_scrape_prices/test_get_tracked_price_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tests/tests_tracked_prices/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tests/tests_tracked_prices/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tests/tests_tracked_prices/test_tracked_price_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tests/tests_tracked_prices/test_tracked_price_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tests/tests_users/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tests/tests_tracked_prices/test_shop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tests/tests_users/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/migrations/0002_auto_20190213_1935.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/migrations/0002_auto_20190213_1935.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/migrations/0003_auto_20190213_2124.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/migrations/0003_auto_20190213_2124.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/migrations/0004_shop.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/migrations/0004_shop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/migrations/0005_trackedprice_when_inform.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/migrations/0005_trackedprice_when_inform.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/migrations/0006_trackedprice_percent_drop.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/migrations/0006_trackedprice_percent_drop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/migrations/0007_auto_20190316_1954.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/migrations/0007_auto_20190316_1954.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/migrations/0008_auto_20190316_1956.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/migrations/0008_auto_20190316_1956.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/migrations/0009_auto_20190317_1651.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/migrations/0009_auto_20190317_1651.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/migrations/0010_auto_20190317_1920.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/migrations/0010_auto_20190317_1920.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/tables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/templates/tracked_prices/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/error_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/templates/tracked_prices/error_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/templates/tracked_prices/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/price_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/templates/tracked_prices/price_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/price_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/templates/tracked_prices/price_new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/pufcia.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/templates/tracked_prices/pufcia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/shops.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/templates/tracked_prices/shops.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/table.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/templates/tracked_prices/table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/tracked_prices_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/templates/tracked_prices/tracked_prices_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/templates/tracked_prices/trackedprice_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/templates/tracked_prices/trackedprice_confirm_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/tracked_prices/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/tracked_prices/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/templates/users/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/templates/users/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/templates/users/password_reset.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/templates/users/password_reset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/templates/users/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/templates/users/password_reset_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/templates/users/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/templates/users/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/templates/users/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/templates/users/password_reset_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/templates/users/password_reset_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/templates/users/password_reset_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/templates/users/password_reset_subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/templates/users/password_reset_subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/templates/users/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriceMonitor/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriceMonitorProj/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,25 +84,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>username</find>
-      <find>toggle</find>
-      <find>auth_views</find>
-      <find>reverse</find>
-      <find>aiohttp</find>
-      <find>new_shop</find>
-      <find>df</find>
-      <find>print</find>
-      <find>list</find>
-      <find>old_prices</find>
-      <find>return</find>
-      <find>message|message</find>
-      <find>run</find>
-      <find>message</find>
-      <find>cqb</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
@@ -61,8 +94,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/PriceMonitor/tests/tests_tracked_prices" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PriceMonitorProj/tests/tests_tracked_prices" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -89,7 +122,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.scrape">
+  <component name="RunManager" selected="Python tests.Unittests for test_tracked_price_model.TestTrackedPrice">
+    <configuration name="scrape (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Price-Monitor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PriceMonitorProj/scrape_prices" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PriceMonitorProj/scrape_prices/scrape.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="scrape" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Price-Monitor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -111,53 +165,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_trackedPrice" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Price-Monitor" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PriceMonitor/tests/tests_tracked_prices" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\marci\Desktop\Projekty\Programowanie\Własne projekty\Price-Monitor\PriceMonitor\tests\tests_tracked_prices\test_tracked_price_model.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for PriceMonitor.tests.tests_tracked_prices.test_tracked_price_model.TestTrackedPrice.test_dunder_str_returns_just_shop_name" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_tracked_price_model.TestTrackedPrice" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Price-Monitor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PriceMonitor/tests/tests_tracked_prices" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PriceMonitorProj/tests/tests_tracked_prices" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;PriceMonitor.tests.tests_tracked_prices.test_tracked_price_model.TestTrackedPrice.test_dunder_str_returns_just_shop_name&quot;" />
+      <option name="_new_target" value="&quot;test_tracked_price_model.TestTrackedPrice&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_get_tracked_price_data.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_tracked_price_model.TestTrackedPrice.test_dunder_str_returns_just_shop_name" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Price-Monitor" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PriceMonitor/tests/tests_scrape_prices" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PriceMonitorProj/tests/tests_tracked_prices" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/PriceMonitor/tests/tests_scrape_prices/test_get_tracked_price_data.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;test_tracked_price_model.TestTrackedPrice.test_dunder_str_returns_just_shop_name&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Unittests in tests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -165,29 +198,29 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PriceMonitor/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PriceMonitorProj/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/PriceMonitor/tests&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/PriceMonitorProj/tests&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.scrape" />
-      <item itemvalue="Python tests.Unittests in test_get_tracked_price_data.py" />
-      <item itemvalue="Python tests.Unittests for PriceMonitor.tests.tests_tracked_prices.test_tracked_price_model.TestTrackedPrice.test_dunder_str_returns_just_shop_name" />
-      <item itemvalue="Python.test_trackedPrice" />
       <item itemvalue="Python tests.Unittests in tests" />
+      <item itemvalue="Python.scrape (1)" />
+      <item itemvalue="Python tests.Unittests for test_tracked_price_model.TestTrackedPrice.test_dunder_str_returns_just_shop_name" />
+      <item itemvalue="Python tests.Unittests for test_tracked_price_model.TestTrackedPrice" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for test_tracked_price_model.TestTrackedPrice" />
+        <item itemvalue="Python tests.Unittests for test_tracked_price_model.TestTrackedPrice.test_dunder_str_returns_just_shop_name" />
+        <item itemvalue="Python.scrape (1)" />
         <item itemvalue="Python.scrape" />
         <item itemvalue="Python tests.Unittests in tests" />
-        <item itemvalue="Python tests.Unittests in test_get_tracked_price_data.py" />
-        <item itemvalue="Python.test_trackedPrice" />
-        <item itemvalue="Python tests.Unittests for PriceMonitor.tests.tests_tracked_prices.test_tracked_price_model.TestTrackedPrice.test_dunder_str_returns_just_shop_name" />
       </list>
     </recent_temporary>
   </component>
@@ -454,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572378420963</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Reset to this in case of weird errors that can occur when changing root dir name">
+      <created>1572975050945</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1572975050945</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -502,7 +542,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/PriceMonitor" />
     </ignored-roots>
-    <MESSAGE value="Done some work on the front. Translated all buttons to polish, removed unnecessary legends, unified sizes and buttons of all forms." />
     <MESSAGE value="Recreated tracked-price table with django-tables2 to be fully sortable and paginated. Need to work on horrid pagination style, though." />
     <MESSAGE value="Changed table template to custom one and what do you know, it corrected pagination ugliness automatically." />
     <MESSAGE value="Modified password reset email message and subject. Changed footer to contain contact info and copyright symbol. Slightly changed header sizes for some pages." />
@@ -527,17 +566,11 @@
     <MESSAGE value="Slight reformat." />
     <MESSAGE value="Documented scrape package. Set proper error handling for scrape connection errors and xpath searches." />
     <MESSAGE value="Some additional code style cleanup and documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some additional code style cleanup and documentation" />
+    <MESSAGE value="Reset to this in case of weird errors that can occur when changing root dir name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reset to this in case of weird errors that can occur when changing root dir name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PriceMonitor/manage.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
